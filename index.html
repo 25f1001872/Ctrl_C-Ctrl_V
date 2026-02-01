@@ -1,379 +1,291 @@
+<!-- updated by Himanshi -->
+
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>DineSight Analytics Home</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0dccf2",
-                        "primary-hover": "#0ab8da",
-                        "accent-amber": "#ffb703",
-                        "background-light": "#f0f4f5", // Light mode fallback
-                        "background-dark": "#0f1619",  // Deep obsidian charcoal
-                        "surface-dark": "#182327",     // Slightly lighter for cards
-                        "border-dark": "#2a3b42",      // Borders
-                        "text-light": "#e0e6e8",       // Main text
-                        "text-muted": "#94a3a8",       // Secondary text
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"],
-                        "sans": ["Inter", "sans-serif"],
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "0.75rem",
-                        "xl": "1rem",
-                        "2xl": "1.5rem",
-                    },
-                    boxShadow: {
-                        'neon': '0 0 15px -3px rgba(13, 204, 242, 0.15)',
-                        'neon-hover': '0 0 25px -5px rgba(13, 204, 242, 0.3)',
-                    }
-                },
-            },
-        }
-    </script>
-<style>
-        /* Custom scrollbar for obsidian feel */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f1619; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #2a3b42; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #3c525b; 
-        }
-        
-        /* Subtle texture overlay */
-        .bg-grid-pattern {
-            background-image: linear-gradient(to right, #2a3b42 1px, transparent 1px),
-                              linear-gradient(to bottom, #2a3b42 1px, transparent 1px);
-            background-size: 40px 40px;
-            mask-image: linear-gradient(to bottom, transparent, black, transparent);
-            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.1) 80%, rgba(0,0,0,0) 100%);
-        }
-    </style>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>RestroIQ Analytics Home</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0dccf2",
+            "primary-hover": "#0ab8da",
+            "accent-amber": "#ffb703",
+            "background-light": "#f0f4f5", // Light mode fallback
+            "background-dark": "#0f1619",  // Deep obsidian charcoal
+            "surface-dark": "#182327",     // Slightly lighter for cards
+            "border-dark": "#2a3b42",      // Borders
+            "text-light": "#e0e6e8",       // Main text
+            "text-muted": "#94a3a8",       // Secondary text
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "sans": ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "2xl": "1.5rem",
+          },
+          boxShadow: {
+            'neon': '0 0 15px -3px rgba(13, 204, 242, 0.15)',
+            'neon-hover': '0 0 25px -5px rgba(13, 204, 242, 0.3)',
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    /* Custom scrollbar for obsidian feel */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0f1619;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #2a3b42;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3c525b;
+    }
+
+    /* Subtle texture overlay */
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, #2a3b42 1px, transparent 1px),
+        linear-gradient(to bottom, #2a3b42 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: linear-gradient(to bottom, transparent, black, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.1) 80%, rgba(0, 0, 0, 0) 100%);
+    }
+  </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-text-light font-display antialiased overflow-x-hidden selection:bg-primary/30 selection:text-primary">
-<!-- Top Navigation -->
-<header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex h-16 items-center justify-between">
-<!-- Logo -->
-<div class="flex items-center gap-3">
-<div class="flex h-8 w-8 items-center justify-center rounded bg-gradient-to-br from-primary to-blue-600 text-white shadow-neon">
-<span class="material-symbols-outlined text-[20px]">analytics</span>
-</div>
-<span class="text-xl font-bold tracking-tight dark:text-white">DineSight</span>
-</div>
-<!-- Desktop Nav -->
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors" href="#">Home</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors" href="#">Upload</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors" href="#">Report</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors" href="#">Docs</a>
-</nav>
-<!-- CTA Button -->
-<div class="flex items-center gap-4">
-<a class="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2 text-sm font-bold text-background-dark transition-all hover:bg-primary-hover hover:shadow-neon focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark" href="#">
-                        Get Started
-                    </a>
-<!-- Mobile menu button (visual only for this demo) -->
-<button class="md:hidden p-2 text-slate-600 dark:text-text-muted">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</div>
-</div>
-</header>
-<main class="flex-grow">
-<!-- Hero Section -->
-<section class="relative pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
-<!-- Background Decoration -->
-<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
-<div class="absolute -top-[20%] -left-[10%] h-[500px] w-[500px] rounded-full bg-primary/20 blur-[120px]"></div>
-<div class="absolute top-[20%] -right-[10%] h-[400px] w-[400px] rounded-full bg-accent-amber/10 blur-[100px]"></div>
-<div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
-</div>
-<div class="layout-container relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-<!-- Left Content -->
-<div class="flex flex-col gap-6 text-center lg:text-left">
-<div class="inline-flex items-center gap-2 self-center lg:self-start rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-<span class="relative flex h-2 w-2">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-</span>
-                            New: AI Sentiment Analysis v2.0
-                        </div>
-<h1 class="text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl lg:leading-[1.1]">
-                            Turn raw reviews into a clear <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">quantitative story</span>
-</h1>
-<p class="text-lg text-slate-600 dark:text-text-muted max-w-2xl mx-auto lg:mx-0">
-                            Stop guessing what your customers think. Use AI-driven analytics to pinpoint service gaps, track anomalies, and celebrate wins with precision.
-                        </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-2">
-<button class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-primary text-background-dark font-bold text-base transition-all hover:bg-primary-hover hover:shadow-neon hover:-translate-y-0.5">
-                                Start Analyzing
-                                <span class="material-symbols-outlined ml-2 text-lg">arrow_forward</span>
-</button>
-<button class="inline-flex items-center justify-center h-12 px-6 rounded-lg border border-slate-200 dark:border-border-dark bg-white/5 dark:bg-surface-dark text-slate-700 dark:text-text-light font-medium text-base transition-all hover:bg-slate-50 dark:hover:bg-border-dark hover:-translate-y-0.5">
-<span class="material-symbols-outlined mr-2 text-primary">play_circle</span>
-                                Watch Demo
-                            </button>
-</div>
-<div class="mt-6 flex items-center justify-center lg:justify-start gap-4 text-sm text-slate-500 dark:text-text-muted">
-<div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-green-500 text-[18px]">check_circle</span>
-<span>No credit card required</span>
-</div>
-<div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-green-500 text-[18px]">check_circle</span>
-<span>Free 14-day trial</span>
-</div>
-</div>
-</div>
-<!-- Right Visual (Mock Dashboard) -->
-<div class="relative w-full max-w-[600px] mx-auto lg:max-w-none perspective-1000">
-<div class="relative rounded-xl border border-border-dark bg-surface-dark shadow-2xl overflow-hidden transform transition-transform lg:rotate-y-12 lg:hover:rotate-y-0 duration-700">
-<!-- Mock Header -->
-<div class="flex items-center gap-2 border-b border-border-dark bg-[#121a1d] px-4 py-3">
-<div class="flex gap-1.5">
-<div class="h-2.5 w-2.5 rounded-full bg-red-500/20"></div>
-<div class="h-2.5 w-2.5 rounded-full bg-amber-500/20"></div>
-<div class="h-2.5 w-2.5 rounded-full bg-green-500/20"></div>
-</div>
-<div class="mx-auto h-5 w-1/3 rounded bg-border-dark/30"></div>
-</div>
-<!-- Mock Content -->
-<div class="grid grid-cols-3 gap-4 p-4">
-<!-- Chart 1 -->
-<div class="col-span-2 rounded bg-background-dark p-3 border border-border-dark/50">
-<div class="mb-3 h-3 w-24 rounded bg-border-dark"></div>
-<div class="flex items-end gap-2 h-24">
-<div class="w-full bg-primary/20 rounded-t h-[40%]"></div>
-<div class="w-full bg-primary/40 rounded-t h-[70%]"></div>
-<div class="w-full bg-primary/60 rounded-t h-[50%]"></div>
-<div class="w-full bg-primary rounded-t h-[85%] shadow-[0_0_10px_rgba(13,204,242,0.5)]"></div>
-<div class="w-full bg-primary/50 rounded-t h-[60%]"></div>
-</div>
-</div>
-<!-- Stat Card -->
-<div class="col-span-1 rounded bg-background-dark p-3 border border-border-dark/50 flex flex-col justify-center">
-<div class="mb-1 h-3 w-12 rounded bg-border-dark"></div>
-<div class="text-3xl font-bold text-white">4.8</div>
-<div class="flex items-center gap-1 text-xs text-green-400 mt-1">
-<span class="material-symbols-outlined text-[14px]">trending_up</span>
-                                        +12%
-                                    </div>
-</div>
-<!-- Bottom Row -->
-<div class="col-span-3 rounded bg-background-dark p-3 border border-border-dark/50 flex gap-3 items-center">
-<div class="h-8 w-8 rounded-full bg-accent-amber/20 flex items-center justify-center text-accent-amber">
-<span class="material-symbols-outlined text-sm">warning</span>
-</div>
-<div class="flex-1 space-y-2">
-<div class="h-2 w-3/4 rounded bg-border-dark"></div>
-<div class="h-2 w-1/2 rounded bg-border-dark/50"></div>
-</div>
-</div>
-</div>
-<!-- Glass Overlay -->
-<div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none"></div>
-</div>
-<!-- Decorative floating elements behind -->
-<div class="absolute -z-10 -bottom-6 -right-6 h-24 w-24 rounded-xl bg-gradient-to-br from-primary to-blue-600 opacity-20 blur-xl"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- Features Grid -->
-<section class="py-20 bg-background-light dark:bg-[#0c1214] border-t border-slate-200 dark:border-border-dark">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="mb-16 text-center max-w-3xl mx-auto">
-<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-                        Powerful Analytics Suite
-                    </h2>
-<p class="mt-4 text-lg text-slate-600 dark:text-text-muted">
-                        Unlock the hidden potential in your unstructured review data with our advanced processing engine.
-                    </p>
-</div>
-<div class="grid md:grid-cols-3 gap-8">
-<!-- Feature 1 -->
-<div class="group relative rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-8 transition-all hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-neon">
-<div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
-<span class="material-symbols-outlined text-3xl">bar_chart</span>
-</div>
-<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Descriptive Insights</h3>
-<p class="text-slate-600 dark:text-text-muted leading-relaxed">
-                            Visualize trends over time with sentiment heatmaps and volume tracking. See exactly when and where your service peaks.
-                        </p>
-</div>
-<!-- Feature 2 -->
-<div class="group relative rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-8 transition-all hover:border-accent-amber/50 dark:hover:border-accent-amber/50 hover:shadow-[0_0_15px_-3px_rgba(255,183,3,0.15)]">
-<div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent-amber/10 text-accent-amber group-hover:bg-accent-amber group-hover:text-background-dark transition-colors">
-<span class="material-symbols-outlined text-3xl">notifications_active</span>
-</div>
-<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Stats &amp; Anomalies</h3>
-<p class="text-slate-600 dark:text-text-muted leading-relaxed">
-                            Detect statistical anomalies in ratings before they become negative trends. Get alerted instantly when quality drops.
-                        </p>
-</div>
-<!-- Feature 3 -->
-<div class="group relative rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-8 transition-all hover:border-purple-400/50 dark:hover:border-purple-400/50 hover:shadow-[0_0_15px_-3px_rgba(192,132,252,0.15)]">
-<div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl">psychology</span>
-</div>
-<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Qualitative Signals</h3>
-<p class="text-slate-600 dark:text-text-muted leading-relaxed">
-                            Extract key phrases, emotional signals, and topics from unstructured text. Understand the "why" behind the rating.
-                        </p>
-</div>
-</div>
-</div>
-</section>
-<!-- How It Works Section -->
-<section class="py-20 bg-background-light dark:bg-background-dark relative overflow-hidden">
-<!-- Dotted connector line (Desktop only) -->
-<div class="hidden md:block absolute top-[45%] left-0 w-full h-px border-t-2 border-dashed border-slate-300 dark:border-border-dark z-0"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="mb-16 text-center">
-<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-                        From raw data to insights
-                    </h2>
-<p class="mt-4 text-slate-600 dark:text-text-muted">
-                        Three simple steps to transform your restaurant management.
-                    </p>
-</div>
-<div class="grid md:grid-cols-3 gap-12 text-center">
-<!-- Step 1 -->
-<div class="flex flex-col items-center gap-4">
-<div class="relative flex items-center justify-center w-20 h-20 rounded-full bg-white dark:bg-surface-dark border-4 border-background-light dark:border-background-dark shadow-xl z-10">
-<span class="text-2xl font-black text-slate-300 dark:text-border-dark absolute -top-2 -left-2 select-none">1</span>
-<span class="material-symbols-outlined text-3xl text-primary">upload_file</span>
-</div>
-<h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2">Upload Data</h3>
-<p class="text-slate-600 dark:text-text-muted text-sm max-w-xs mx-auto">
-                            Drag and drop your CSV or JSON files containing raw restaurant reviews directly into our secure portal.
-                        </p>
-</div>
-<!-- Step 2 -->
-<div class="flex flex-col items-center gap-4">
-<div class="relative flex items-center justify-center w-20 h-20 rounded-full bg-white dark:bg-surface-dark border-4 border-background-light dark:border-background-dark shadow-xl z-10">
-<span class="text-2xl font-black text-slate-300 dark:text-border-dark absolute -top-2 -left-2 select-none">2</span>
-<span class="material-symbols-outlined text-3xl text-primary">auto_fix_high</span>
-</div>
-<h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2">AI Processing</h3>
-<p class="text-slate-600 dark:text-text-muted text-sm max-w-xs mx-auto">
-                            Our NLP engine cleans, tokenizes, and analyzes sentiment, identifying key topics and statistical anomalies.
-                        </p>
-</div>
-<!-- Step 3 -->
-<div class="flex flex-col items-center gap-4">
-<div class="relative flex items-center justify-center w-20 h-20 rounded-full bg-white dark:bg-surface-dark border-4 border-background-light dark:border-background-dark shadow-xl z-10">
-<span class="text-2xl font-black text-slate-300 dark:text-border-dark absolute -top-2 -left-2 select-none">3</span>
-<span class="material-symbols-outlined text-3xl text-primary">monitoring</span>
-</div>
-<h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2">Interactive Report</h3>
-<p class="text-slate-600 dark:text-text-muted text-sm max-w-xs mx-auto">
-                            Explore your data through an interactive dashboard. Filter by date, sentiment, or topic and share with your team.
-                        </p>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-20">
-<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="relative overflow-hidden rounded-3xl bg-surface-dark border border-border-dark px-6 py-16 text-center shadow-2xl sm:px-16">
-<!-- Background Glow -->
-<div class="absolute -top-24 -left-24 h-64 w-64 rounded-full bg-primary/10 blur-[80px]"></div>
-<div class="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-primary/10 blur-[80px]"></div>
-<div class="relative z-10">
-<h2 class="mx-auto max-w-2xl text-3xl font-black tracking-tight text-white sm:text-4xl">
-                            Ready to understand your customers?
-                        </h2>
-<p class="mx-auto mt-4 max-w-xl text-lg text-text-muted">
-                            Join other data-driven restaurants today. Turn complaints into corrections and compliments into culture.
-                        </p>
-<div class="mt-8 flex justify-center gap-4">
-<button class="flex items-center justify-center rounded-lg bg-primary px-8 py-3 text-base font-bold text-background-dark transition-all hover:bg-primary-hover hover:shadow-neon">
-                                Start Analyzing Now
-                            </button>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="border-t border-slate-200 dark:border-border-dark bg-white dark:bg-[#0c1214] pt-12 pb-8">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
-<div class="col-span-2 lg:col-span-2">
-<div class="flex items-center gap-2 mb-4">
-<span class="material-symbols-outlined text-primary">analytics</span>
-<span class="text-lg font-bold text-slate-900 dark:text-white">DineSight</span>
-</div>
-<p class="text-sm text-slate-600 dark:text-text-muted max-w-xs mb-6">
-                        Empowering restaurant owners with enterprise-grade sentiment analysis and data visualization tools.
-                    </p>
-<div class="flex gap-4">
-<a class="text-slate-400 hover:text-primary transition-colors" href="#">
-<span class="sr-only">Twitter</span>
-<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
-</a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="#">
-<span class="sr-only">GitHub</span>
-<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
-</a>
-</div>
-</div>
-<div>
-<h3 class="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Product</h3>
-<ul class="space-y-3">
-<li><a class="text-sm text-slate-600 dark:text-text-muted hover:text-primary transition-colors" href="#">Features</a></li>
-<li><a class="text-sm text-slate-600 dark:text-text-muted hover:text-primary transition-colors" href="#">Integrations</a></li>
-<li><a class="text-sm text-slate-600 dark:text-text-muted hover:text-primary transition-colors" href="#">Pricing</a></li>
-<li><a class="text-sm text-slate-600 dark:text-text-muted hover:text-primary transition-colors" href="#">Changelog</a></li>
-</ul>
-</div>
-<div>
-<h3 class="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Resources</h3>
-<ul class="space-y-3">
-<li><a class="text-sm text-slate-600 dark:text-text-muted hover:text-primary transition-colors" href="#">Documentation</a></li>
-<li><a class="text-sm text-slate-600 dark:text-text-muted hover:text-primary transition-colors" href="#">API Reference</a></li>
-<li><a class="text-sm text-slate-600 dark:text-text-muted hover:text-primary transition-colors" href="#">Blog</a></li>
-<li><a class="text-sm text-slate-600 dark:text-text-muted hover:text-primary transition-colors" href="#">Community</a></li>
-</ul>
-</div>
-<div>
-<h3 class="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Legal</h3>
-<ul class="space-y-3">
-<li><a class="text-sm text-slate-600 dark:text-text-muted hover:text-primary transition-colors" href="#">Privacy</a></li>
-<li><a class="text-sm text-slate-600 dark:text-text-muted hover:text-primary transition-colors" href="#">Terms</a></li>
-</ul>
-</div>
-</div>
-<div class="mt-12 pt-8 border-t border-slate-200 dark:border-border-dark text-center">
-<p class="text-sm text-slate-500 dark:text-text-muted">
-                    © 2024 DineSight Analytics. All rights reserved.
-                </p>
-</div>
-</div>
-</footer>
-</body></html>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-text-light font-display antialiased overflow-x-hidden selection:bg-primary/30 selection:text-primary">
+  <!-- Top Navigation -->
+  <header
+    class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div
+            class="flex h-8 w-8 items-center justify-center rounded bg-gradient-to-br from-primary to-blue-600 text-white shadow-neon">
+            <span class="material-symbols-outlined text-[20px]">analytics</span>
+          </div>
+          <span class="text-xl font-bold tracking-tight dark:text-white">RestroIQ</span>
+        </div>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors"
+            href="#">Home</a>
+          <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors"
+            href="#">Upload</a>
+          <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors"
+            href="#">Report</a>
+          <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors"
+            href="#">Docs</a>
+        </nav>
+        <!-- CTA Button -->
+        <div class="flex items-center gap-4">
+          <a class="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2 text-sm font-bold text-background-dark transition-all hover:bg-primary-hover hover:shadow-neon focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark"
+            href="#">
+            Get Started
+          </a>
+          <!-- Mobile menu button (visual only for this demo) -->
+          <button class="md:hidden p-2 text-slate-600 dark:text-text-muted">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
+      <!-- Background Decoration -->
+      <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+        <div class="absolute -top-[20%] -left-[10%] h-[500px] w-[500px] rounded-full bg-primary/20 blur-[120px]"></div>
+        <div class="absolute top-[20%] -right-[10%] h-[400px] w-[400px] rounded-full bg-accent-amber/10 blur-[100px]">
+        </div>
+        <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+      </div>
+      <div class="layout-container relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 lg:gap-8 items-center">
+          <!-- Left Content -->
+          <div class="flex flex-col gap-6 text-center lg:text-left">
+            <h1
+              class="text-xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl lg:leading-[1.1]">
+              Understand what your customers are really saying
+            </h1>
+            <p class="text-lg text-slate-600 dark:text-text-muted max-w-2xl mx-auto lg:mx-0">
+              Reviews are messy. We turn them into structured insights you can actually use.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-2">
+              <button
+                class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-primary text-background-dark font-bold text-base transition-all hover:bg-primary-hover hover:shadow-neon hover:-translate-y-0.5">
+                Analyze your data
+                <span class="material-symbols-outlined ml-2 text-lg">arrow_forward</span>
+              </button>
+            </div>
+            <div
+              class="flex items-center justify-center lg:justify-start gap-4 text-sm text-slate-500 dark:text-text-muted">
+            </div>
+          </div>
+          <!-- Right Visual (Mock Dashboard) -->
+          <div class="relative w-full max-w-[600px] mx-auto lg:max-w-none perspective-1000">
+            <div
+              class="relative rounded-xl border border-border-dark bg-surface-dark shadow-2xl overflow-hidden transform transition-transform lg:rotate-y-12 lg:hover:rotate-y-0 duration-700">
+              <!-- Mock Header -->
+              <div class="flex items-center gap-2 border-b border-border-dark bg-[#121a1d] px-4 py-3">
+                <div class="flex gap-1.5">
+                  <div class="h-2.5 w-2.5 rounded-full bg-red-500/20"></div>
+                  <div class="h-2.5 w-2.5 rounded-full bg-amber-500/20"></div>
+                  <div class="h-2.5 w-2.5 rounded-full bg-green-500/20"></div>
+                </div>
+                <div class="mx-auto h-5 w-1/3 rounded bg-border-dark/30"></div>
+              </div>
+              <!-- Mock Content -->
+              <div class="grid grid-cols-3 gap-4 p-4">
+                <!-- Chart 1 -->
+                <div class="col-span-2 rounded bg-background-dark p-3 border border-border-dark/50">
+                  <div class="mb-3 h-3 w-24 rounded bg-border-dark"></div>
+                  <div class="flex items-end gap-2 h-24">
+                    <div class="w-full bg-primary/20 rounded-t h-[40%]"></div>
+                    <div class="w-full bg-primary/40 rounded-t h-[70%]"></div>
+                    <div class="w-full bg-primary/60 rounded-t h-[50%]"></div>
+                    <div class="w-full bg-primary rounded-t h-[85%] shadow-[0_0_10px_rgba(13,204,242,0.5)]"></div>
+                    <div class="w-full bg-primary/50 rounded-t h-[60%]"></div>
+                  </div>
+                </div>
+                <!-- Stat Card -->
+                <div
+                  class="col-span-1 rounded bg-background-dark p-3 border border-border-dark/50 flex flex-col justify-center">
+                  <div class="mb-1 h-3 w-12 rounded bg-border-dark"></div>
+                  <div class="text-3xl font-bold text-white">4.8</div>
+                  <div class="flex items-center gap-1 text-xs text-green-400 mt-1">
+                    <span class="material-symbols-outlined text-[14px]">trending_up</span>
+                    +12%
+                  </div>
+                </div>
+                <!-- Bottom Row -->
+                <div
+                  class="col-span-3 rounded bg-background-dark p-3 border border-border-dark/50 flex gap-3 items-center">
+                  <div
+                    class="h-8 w-8 rounded-full bg-accent-amber/20 flex items-center justify-center text-accent-amber">
+                    <span class="material-symbols-outlined text-sm">warning</span>
+                  </div>
+                  <div class="flex-1 space-y-2">
+                    <div class="h-2 w-3/4 rounded bg-border-dark"></div>
+                    <div class="h-2 w-1/2 rounded bg-border-dark/50"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Glass Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none"></div>
+            </div>
+            <!-- Decorative floating elements behind -->
+            <div
+              class="absolute -z-10 -bottom-6 -right-6 h-24 w-24 rounded-xl bg-gradient-to-br from-primary to-blue-600 opacity-20 blur-xl">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Features Grid -->
+    <section class="bg-background-light dark:bg-[#0c1214]">
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16 text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+            What you can do with your data
+          </h2>
+          <p class="mt-4 text-lg text-slate-600 dark:text-text-muted">
+            We clean and organize raw reviews so patterns and trends become easy to see.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="group relative rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-8 transition-all hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-neon">
+            <div
+              class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
+              <span class="material-symbols-outlined text-3xl">bar_chart</span>
+            </div>
+            <h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Trends over time</h3>
+            <p class="text-slate-600 dark:text-text-muted leading-relaxed">
+              Track how ratings and sentiment shift over time to spot improvements or slowdowns
+            </p>
+          </div>
+          <!-- Feature 2 -->
+          <div
+            class="group relative rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-8 transition-all hover:border-accent-amber/50 dark:hover:border-accent-amber/50 hover:shadow-[0_0_15px_-3px_rgba(255,183,3,0.15)]">
+            <div
+              class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent-amber/10 text-accent-amber group-hover:bg-accent-amber group-hover:text-background-dark transition-colors">
+              <span class="material-symbols-outlined text-3xl">notifications_active</span>
+            </div>
+            <h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Stats &amp; Anomalies</h3>
+            <p class="text-slate-600 dark:text-text-muted leading-relaxed">
+              Detect statistical anomalies in ratings before they become negative trends. Get alerted instantly when
+              quality drops.
+            </p>
+          </div>
+          <!-- Feature 3 -->
+          <div
+            class="group relative rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-8 transition-all hover:border-purple-400/50 dark:hover:border-purple-400/50 hover:shadow-[0_0_15px_-3px_rgba(192,132,252,0.15)]">
+            <div
+              class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-3xl">psychology</span>
+            </div>
+            <h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Qualitative Signals</h3>
+            <p class="text-slate-600 dark:text-text-muted leading-relaxed">
+              Extract key phrases, emotional signals, and topics from unstructured text. Understand the "why" behind the
+              rating.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-border-dark bg-white dark:bg-[#0c1214] pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5 mb-12">
+      </div>
+
+      <div class="flex justify-center items-center gap-2 mb-3">
+        <span class="material-symbols-outlined text-primary text-[22px]">
+          analytics
+        </span>
+        <span class="text-lg font-semibold tracking-tight text-slate-900 dark:text-white">
+          RestroIQ
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
