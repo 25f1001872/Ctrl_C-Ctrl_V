@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DineSight – Upload Data</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0dccf2",
+            "primary-hover": "#0ab8da",
+            "accent-amber": "#ffb703",
+            "background-light": "#f0f4f5",
+            "background-dark": "#0f1619",
+            "surface-dark": "#182327",
+            "border-dark": "#2a3b42",
+            "text-light": "#e0e6e8",
+            "text-muted": "#94a3a8",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "sans": ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "2xl": "1.5rem",
+          },
+          boxShadow: {
+            'neon': '0 0 15px -3px rgba(13, 204, 242, 0.15)',
+            'neon-hover': '0 0 25px -5px rgba(13, 204, 242, 0.3)',
+          }
+        },
+      },
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0f1619;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #2a3b42;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3c525b;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-text-light font-display antialiased overflow-x-hidden selection:bg-primary/30 selection:text-primary">
+
+  <!-- Top Navigation (same as home) -->
+  <header
+    class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div
+            class="flex h-8 w-8 items-center justify-center rounded bg-gradient-to-br from-primary to-blue-600 text-white shadow-neon">
+            <span class="material-symbols-outlined text-[20px]">analytics</span>
+          </div>
+          <span class="text-xl font-bold tracking-tight dark:text-white">DineSight</span>
+        </div>
+
+
+        <div class="flex items-center gap-4">
+          <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors"
+            href="{{ url_for('home') }}">Home</a>
+          <a class="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2 text-sm font-bold text-background-dark transition-all hover:bg-primary-hover hover:shadow-neon"
+            href="#">
+            Analyse Data
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <section class="py-12 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Page title -->
+        <div class="mb-8">
+          <p class="text-xs uppercase tracking-[0.2em] text-text-muted mb-2">Upload · Configure</p>
+          <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+            Initialize Data Project
+          </h1>
+          <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-text-muted max-w-2xl">
+            Upload your restaurant review CSV and review the schema requirements before running quantitative and
+            qualitative analysis.
+          </p>
+        </div>
+
+        <!-- Two-column layout -->
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+          <!-- LEFT: Source Data -->
+          <div class="space-y-6">
+            <div
+              class="rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-6 sm:p-7 shadow-xl">
+              <div class="flex items-center gap-2 mb-5">
+                <span class="material-symbols-outlined text-primary">database</span>
+                <h2 class="text-lg font-semibold text-slate-900 dark:text-white">Source Data</h2>
+              </div>
+
+              <form id="uploadForm">
+
+                <!-- Drop zone -->
+                <label for="file-input" class="block rounded-xl border-2 border-dashed border-border-dark/70
+           bg-background-light/40 dark:bg-background-dark/40 px-6 py-10 text-center
+           cursor-pointer hover:border-primary/70 hover:bg-background-light/70
+           dark:hover:bg-surface-dark/60 transition-all">
+
+                  <input id="file-input" name="csv_file" type="file" accept=".csv" class="hidden" required />
+
+                  <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full
+             bg-primary/10 text-primary">
+                    <span class="material-symbols-outlined text-3xl">cloud_upload</span>
+                  </div>
+
+                  <p id="file-text" class="text-sm sm:text-base font-medium">
+                    Click to upload or drag and drop
+                  </p>
+
+                  <p class="mt-1 text-xs text-text-muted">
+                    CSV files only · Max 50MB
+                  </p>
+                </label>
+
+                <!-- Run analysis button -->
+                <button id="runBtn" type="button" class="mt-6 w-full rounded-xl bg-primary px-6 py-3 text-white font-semibold
+           hover:bg-primary/90 transition-all">
+                  Run Analysis
+                </button>
+
+              </form>
+
+              <pre id="output"></pre>
+
+
+
+              <!-- Required schema pills -->
+              <div class="mt-6">
+                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted mb-2">
+                  Required schema columns
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <!-- each pill -->
+                  <span
+                    class="inline-flex items-center gap-1 rounded-full bg-background-light/70 dark:bg-background-dark/70 border border-border-dark/60 px-3 py-1 text-xs text-text-light">
+                    <span class="material-symbols-outlined text-[16px] text-primary">star</span>
+                    rating_overall
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 rounded-full bg-background-light/70 dark:bg-background-dark/70 border border-border-dark/60 px-3 py-1 text-xs text-text-light">
+                    <span class="material-symbols-outlined text-[16px] text-primary">thumb_up</span>
+                    like_count
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 rounded-full bg-background-light/70 dark:bg-background-dark/70 border border-border-dark/60 px-3 py-1 text-xs text-text-light">
+                    <span class="material-symbols-outlined text-[16px] text-primary">location_city</span>
+                    city
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 rounded-full bg-background-light/70 dark:bg-background-dark/70 border border-border-dark/60 px-3 py-1 text-xs text-text-light">
+                    <span class="material-symbols-outlined text-[16px] text-primary">storefront</span>
+                    restaurant_name
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 rounded-full bg-background-light/70 dark:bg-background-dark/70 border border-border-dark/60 px-3 py-1 text-xs text-text-light">
+                    <span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+                    created_at
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 rounded-full bg-background-light/70 dark:bg-background-dark/70 border border-border-dark/60 px-3 py-1 text-xs text-text-light">
+                    <span class="material-symbols-outlined text-[16px] text-primary">restaurant_menu</span>
+                    primary_cuisine
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 rounded-full bg-background-light/70 dark:bg-background-dark/70 border border-border-dark/60 px-3 py-1 text-xs text-text-light">
+                    <span class="material-symbols-outlined text-[16px] text-primary">chat</span>
+                    review_text
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 rounded-full bg-background-light/70 dark:bg-background-dark/70 border border-border-dark/60 px-3 py-1 text-xs text-text-light">
+                    <span class="material-symbols-outlined text-[16px] text-primary">counter_1</span>
+                    restaurant_review_count
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent uploads (optional) -->
+            <div
+              class="rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-5 shadow-lg">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-sm font-semibold text-slate-900 dark:text-white">Recent uploads</h3>
+              </div>
+              <div
+                class="flex items-center justify-between rounded-lg bg-background-light/70 dark:bg-background-dark/60 px-3 py-3">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary">description</span>
+                  <div>
+                    <p class="text-sm font-medium text-text-light">restaurant_reviews_sample.csv</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-text-muted text-lg">more_vert</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: CSV Requirements -->
+          <div
+            class="rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-6 sm:p-7 shadow-xl">
+            <div class="flex items-center gap-2 mb-5">
+              <span class="material-symbols-outlined text-primary">rule</span>
+              <h2 class="text-lg font-semibold text-slate-900 dark:text-white">CSV Requirements</h2>
+            </div>
+
+            <!-- Required columns table -->
+            <h3 class="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted mb-2">
+              Required columns
+            </h3>
+            <div class="overflow-hidden rounded-xl border border-border-dark/70 mb-6">
+              <table class="min-w-full text-xs sm:text-sm">
+                <thead class="bg-background-dark/60 text-text-muted">
+                  <tr>
+                    <th class="px-3 py-2 text-left font-medium">Column</th>
+                    <th class="px-3 py-2 text-left font-medium">Type</th>
+                    <th class="px-3 py-2 text-left font-medium">Description</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-border-dark/70 bg-background-dark/40">
+                  <tr>
+                    <td class="px-3 py-2 font-medium text-text-light">rating_overall</td>
+                    <td class="px-3 py-2 text-text-muted">Number (1–5)</td>
+                    <td class="px-3 py-2 text-text-muted">Overall rating given in the review.</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 font-medium text-text-light">like_count</td>
+                    <td class="px-3 py-2 text-text-muted">Integer (0+)</td>
+                    <td class="px-3 py-2 text-text-muted">Number of likes / upvotes for the review.</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 font-medium text-text-light">city</td>
+                    <td class="px-3 py-2 text-text-muted">Text</td>
+                    <td class="px-3 py-2 text-text-muted">City where the restaurant is located.</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 font-medium text-text-light">restaurant_name</td>
+                    <td class="px-3 py-2 text-text-muted">Text</td>
+                    <td class="px-3 py-2 text-text-muted">Name of the restaurant.</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 font-medium text-text-light">created_at</td>
+                    <td class="px-3 py-2 text-text-muted">Datetime</td>
+                    <td class="px-3 py-2 text-text-muted">Review timestamp in <code>YYYY-MM-DD</code> or
+                      <code>YYYY-MM-DD HH:MM:SS</code>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 font-medium text-text-light">primary_cuisine</td>
+                    <td class="px-3 py-2 text-text-muted">Text</td>
+                    <td class="px-3 py-2 text-text-muted">Main cuisine label (e.g., “Italian”, “North Indian”).</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 font-medium text-text-light">review_text</td>
+                    <td class="px-3 py-2 text-text-muted">Text</td>
+                    <td class="px-3 py-2 text-text-muted">Full written review from the customer.</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 font-medium text-text-light">restaurant_review_count</td>
+                    <td class="px-3 py-2 text-text-muted">Integer</td>
+                    <td class="px-3 py-2 text-text-muted">Total reviews for that restaurant on the source platform.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- General instructions -->
+            <h3 class="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted mb-2">
+              General instructions
+            </h3>
+            <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm text-text-muted mb-6">
+              <li>File must be CSV with a header row.</li>
+              <li>One row represents a single review.</li>
+              <li>Column names should match exactly (case‑sensitive).</li>
+              <li>Missing values are allowed but may reduce detail in some sections.</li>
+              <li>If only one city, one restaurant, or very few cuisines exist, some comparison views in the report will
+                show as “N/A”.</li>
+            </ul>
+
+            <div class="flex justify-end">
+              <button
+                class="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-2.5 text-sm font-bold text-background-dark transition-all hover:bg-primary-hover hover:shadow-neon"
+                onclick="execute_analysis()">
+                Run Analysis
+                <span class="material-symbols-outlined ml-1 text-sm">play_arrow</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+<script>
+  const fileInput = document.getElementById("file-input");
+  const fileText = document.getElementById("file-text");
+  const runBtn = document.getElementById("runBtn");
+  const output = document.getElementById("output");
+
+  fileInput.addEventListener("change", () => {
+    if (fileInput.files.length > 0) {
+      fileText.textContent = fileInput.files[0].name;
+    }
+  });
+
+  runBtn.addEventListener("click", async () => {
+    if (!fileInput.files.length) {
+      alert("Please upload a CSV file first");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("csv_file", fileInput.files[0]);
+
+    runBtn.disabled = true;
+    runBtn.textContent = "Analyzing...";
+
+    try {
+      const res = await fetch("/analyze", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await res.json();
+      localStorage.setItem("analysis_result", JSON.stringify(data));
+      window.location.href = "{{ url_for('report') }}";
+
+    } catch (err) {
+      output.textContent = "Error running analysis";
+    } finally {
+      runBtn.disabled = false;
+      runBtn.textContent = "Run Analysis";
+    }
+  });
+</script>
+</html>
