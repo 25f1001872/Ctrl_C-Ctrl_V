@@ -1,0 +1,101 @@
+{
+  "FOOD_PROBLEM": [
+    "bad taste", "bad taste of food", "tasteless", "no taste", "bland",
+    "salty", "too salty", "too spicy", "very spicy", "spicy",
+    "oily", "too oily", "greasy",
+    "smelly", "bad smell", "food had bad smell",
+    "stale", "rotten", "spoiled", "food was stale", "food was not fresh",
+    "raw", "undercooked", "uncooked", "half cooked", "overcooked",
+    "burnt", "burned", "dry", "hard to eat",
+    "cold food", "food was cold", "not hot", "food temperature issue",
+    "quantity less", "less quantity", "small portion", "tiny portion",
+    "food portion size was small", "food quantity issue",
+    "poor quality", "low quality", "food quality issue",
+    "worst food", "bad food", "junk food", "disgusting", "inedible",
+    "wrong food item delivered", "missing food item"
+  ],
+
+  "PRICE_PROBLEM": [
+    "too expensive", "very expensive", "high price", "price high",
+    "overpriced", "food was too expensive",
+    "not worth", "not worth the price",
+    "price not justified", "price was not justified",
+    "pricing issue", "price issue", "price problem",
+    "wrong price charged", "billing issue",
+    "charged extra", "charged extra money",
+    "value for money issue", "no value for money",
+    "price mismatch", "menu price and bill price mismatch",
+    "money wasted", "waste of money"
+  ],
+
+  "SERVICE_PROBLEM": [
+    "poor service", "bad service", "worst service",
+    "customer service issue", "customer service bad",
+    "staff behavior issue", "bad behavior", "attitude problem",
+    "rude staff", "staff rude", "unhelpful staff",
+    "slow service", "service delay",
+    "complaint handling issue",
+    "staff did not respond properly",
+    "restaurant did not resolve complaint",
+    "bad service experience",
+    "ignored", "not responding", "no response"
+  ],
+
+  "DELIVERY_PROBLEM": [
+    "delivery issue", "delivery problem",
+    "late delivery", "very late", "delivery delayed",
+    "food delivered late", "delivery delay",
+    "delivery promise not kept",
+    "took too long", "waiting long", "long wait",
+    "wrong order delivered",
+    "food not delivered", "not delivered",
+    "missing delivery",
+    "delivery person rude", "delivery boy rude",
+    "delivery person behavior issue",
+    "delivery complaint",
+    "delivery issue not resolved",
+    "tracking issue",
+    "awful delivery", "terrible delivery"
+  ],
+
+  "PACKAGING_PROBLEM": [
+    "packaging issue", "poor packaging", "bad packaging",
+    "food packaging was bad",
+    "packaging damaged", "package damaged",
+    "box damaged", "box broken",
+    "container broken",
+    "food leaked from package", "leaked", "leakage",
+    "food spilled", "spilled",
+    "improper packaging",
+    "packing poor", "packing issue",
+    "seal broken"
+  ],
+
+  "GOOD_EXPERIENCE": [
+    "good", "very good", "nice", "very nice",
+    "good food quality", "excellent food", "very tasty food",
+    "food tasted great", "delicious", "tasty",
+    "awesome", "amazing", "perfect",
+    "fresh food", "fresh and tasty",
+    "good service", "excellent service", "great service",
+    "friendly staff", "polite staff",
+    "fast delivery", "quick delivery", "on time delivery",
+    "good packaging", "well packed", "properly packed",
+    "satisfied", "happy", "happy with the experience",
+    "overall good experience", "great experience",
+    "worth the price", "value for money",
+    "will order again", "recommended",
+    "best food", "must visit"
+  ],
+
+  "BAD_EXPERIENCE": [
+    "bad experience", "very bad experience",
+    "worst experience", "terrible experience",
+    "awful", "horrible", "pathetic",
+    "worst", "very bad", "bad",
+    "never again", "not recommended",
+    "totally disappointed", "highly disappointed",
+    "regret ordering", "disappointed",
+    "waste", "useless"
+  ]
+}

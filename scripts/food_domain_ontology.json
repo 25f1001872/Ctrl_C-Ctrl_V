@@ -1,0 +1,163 @@
+{
+  "food": {
+    "dishes": {
+      "mains": [
+        "chicken curry",
+        "chicken biryani",
+        "butter chicken",
+        "mutton curry",
+        "fish curry",
+        "paneer butter masala",
+        "paneer tikka",
+        "dal tadka",
+        "dal makhani",
+        "rajma",
+        "chole",
+        "veg curry",
+        "fried rice",
+        "noodles",
+        "pasta",
+        "pizza",
+        "burger",
+        "sandwich",
+        "shawarma",
+        "kebab",
+        "steak"
+      ],
+      "regional_indian": [
+        "alu bhorta",
+        "lotpoti",
+        "litti chokha",
+        "mishti doi",
+        "rasgulla",
+        "idli",
+        "dosa",
+        "sambar",
+        "vada",
+        "bisi bele bath",
+        "poha",
+        "upma"
+      ],
+      "sides": [
+        "naan",
+        "roti",
+        "paratha",
+        "butter naan",
+        "jeera rice",
+        "plain rice",
+        "salad",
+        "raita",
+        "papad",
+        "chutney"
+      ],
+      "starters": [
+        "chicken tikka",
+        "paneer pakora",
+        "spring rolls",
+        "manchurian",
+        "french fries",
+        "soup"
+      ],
+      "desserts": [
+        "ice cream",
+        "brownie",
+        "cake",
+        "gulab jamun",
+        "kheer",
+        "halwa"
+      ],
+      "beverages": [
+        "tea",
+        "coffee",
+        "cold drink",
+        "mocktail",
+        "juice",
+        "lassi",
+        "beer",
+        "wine"
+      ]
+    },
+    "food_quality_concepts": [
+      "freshness",
+      "taste",
+      "flavor",
+      "spice level",
+      "oiliness",
+      "portion size",
+      "temperature",
+      "presentation",
+      "smell",
+      "texture"
+    ]
+  },
+
+  "pricing": {
+    "price_concepts": [
+      "price",
+      "cost",
+      "pricing",
+      "bill",
+      "amount",
+      "value for money",
+      "overpriced",
+      "cheap",
+      "expensive",
+      "worth the price",
+      "not worth it",
+      "affordable"
+    ],
+    "billing_issues": [
+      "extra charges",
+      "hidden charges",
+      "tax issue",
+      "service charge",
+      "wrong bill"
+    ]
+  },
+
+  "service": {
+    "service_entities": [
+      "staff",
+      "waiter",
+      "server",
+      "manager",
+      "cashier",
+      "delivery person"
+    ],
+    "service_quality_concepts": [
+      "politeness",
+      "responsiveness",
+      "waiting time",
+      "order accuracy",
+      "behavior",
+      "attentiveness",
+      "speed of service"
+    ]
+  },
+
+  "ambience": {
+    "ambience_concepts": [
+      "ambience",
+      "atmosphere",
+      "lighting",
+      "music",
+      "noise",
+      "seating",
+      "cleanliness",
+      "hygiene",
+      "washroom",
+      "crowd"
+    ]
+  },
+
+  "logistics": {
+    "logistics_concepts": [
+      "parking",
+      "location",
+      "accessibility",
+      "queue",
+      "reservation",
+      "waiting area"
+    ]
+  }
+}

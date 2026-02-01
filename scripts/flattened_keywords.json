@@ -1,0 +1,4034 @@
+[
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "tasty"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "delicious"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "amazing"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "great taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "excellent taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "yummy"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "flavorful"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "authentic"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "fresh taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "perfect taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "taste was good"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "taste is good"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "tasted good"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "taste was amazing"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "taste is amazing"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "food was good"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "food is good"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "neutral",
+    "severity": null,
+    "phrase": "average taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "neutral",
+    "severity": null,
+    "phrase": "okay taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "neutral",
+    "severity": null,
+    "phrase": "normal taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "neutral",
+    "severity": null,
+    "phrase": "taste ok"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bland"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "tasteless"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "poor taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "taste horrible"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "taste disgusting"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "fake taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "taste was bad"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "taste is bad"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "tasted bad"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "taste not good"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "too bad taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "taste",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "very bad taste"
+  },
+  {
+    "theme": "food",
+    "subtheme": "spice_level",
+    "polarity": "balanced",
+    "severity": null,
+    "phrase": "spicy"
+  },
+  {
+    "theme": "food",
+    "subtheme": "spice_level",
+    "polarity": "balanced",
+    "severity": null,
+    "phrase": "proper spice"
+  },
+  {
+    "theme": "food",
+    "subtheme": "spice_level",
+    "polarity": "balanced",
+    "severity": null,
+    "phrase": "good spice"
+  },
+  {
+    "theme": "food",
+    "subtheme": "spice_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "too spicy"
+  },
+  {
+    "theme": "food",
+    "subtheme": "spice_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "extremely spicy"
+  },
+  {
+    "theme": "food",
+    "subtheme": "spice_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "way spicy"
+  },
+  {
+    "theme": "food",
+    "subtheme": "spice_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "excess spice"
+  },
+  {
+    "theme": "food",
+    "subtheme": "spice_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "no spice"
+  },
+  {
+    "theme": "food",
+    "subtheme": "salt_sweet_balance",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "salty"
+  },
+  {
+    "theme": "food",
+    "subtheme": "salt_sweet_balance",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "too salty"
+  },
+  {
+    "theme": "food",
+    "subtheme": "salt_sweet_balance",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "saltless"
+  },
+  {
+    "theme": "food",
+    "subtheme": "salt_sweet_balance",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "sweet"
+  },
+  {
+    "theme": "food",
+    "subtheme": "salt_sweet_balance",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "too sweet"
+  },
+  {
+    "theme": "food",
+    "subtheme": "cooking_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "undercooked"
+  },
+  {
+    "theme": "food",
+    "subtheme": "cooking_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "overcooked"
+  },
+  {
+    "theme": "food",
+    "subtheme": "cooking_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "raw"
+  },
+  {
+    "theme": "food",
+    "subtheme": "cooking_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "burnt"
+  },
+  {
+    "theme": "food",
+    "subtheme": "cooking_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "half cooked"
+  },
+  {
+    "theme": "food",
+    "subtheme": "cooking_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "not cooked properly"
+  },
+  {
+    "theme": "food",
+    "subtheme": "cooking_quality",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "properly cooked"
+  },
+  {
+    "theme": "food",
+    "subtheme": "cooking_quality",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "perfectly cooked"
+  },
+  {
+    "theme": "food",
+    "subtheme": "cooking_quality",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "well cooked"
+  },
+  {
+    "theme": "food",
+    "subtheme": "freshness",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "fresh"
+  },
+  {
+    "theme": "food",
+    "subtheme": "freshness",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "fresh food"
+  },
+  {
+    "theme": "food",
+    "subtheme": "freshness",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "freshly cooked"
+  },
+  {
+    "theme": "food",
+    "subtheme": "freshness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "stale"
+  },
+  {
+    "theme": "food",
+    "subtheme": "freshness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "stale food"
+  },
+  {
+    "theme": "food",
+    "subtheme": "freshness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "old food"
+  },
+  {
+    "theme": "food",
+    "subtheme": "freshness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "rotten"
+  },
+  {
+    "theme": "food",
+    "subtheme": "freshness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "spoiled"
+  },
+  {
+    "theme": "food",
+    "subtheme": "freshness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "smelly"
+  },
+  {
+    "theme": "food",
+    "subtheme": "freshness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad smell"
+  },
+  {
+    "theme": "food",
+    "subtheme": "temperature",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "cold food"
+  },
+  {
+    "theme": "food",
+    "subtheme": "temperature",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "cold"
+  },
+  {
+    "theme": "food",
+    "subtheme": "temperature",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "served cold"
+  },
+  {
+    "theme": "food",
+    "subtheme": "temperature",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "food cold"
+  },
+  {
+    "theme": "food",
+    "subtheme": "temperature",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "hot"
+  },
+  {
+    "theme": "food",
+    "subtheme": "temperature",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "served hot"
+  },
+  {
+    "theme": "food",
+    "subtheme": "temperature",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "warm food"
+  },
+  {
+    "theme": "food",
+    "subtheme": "texture",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "oily"
+  },
+  {
+    "theme": "food",
+    "subtheme": "texture",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "greasy"
+  },
+  {
+    "theme": "food",
+    "subtheme": "texture",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "dry"
+  },
+  {
+    "theme": "food",
+    "subtheme": "texture",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "soggy"
+  },
+  {
+    "theme": "food",
+    "subtheme": "texture",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "rubbery"
+  },
+  {
+    "theme": "food",
+    "subtheme": "texture",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "hard"
+  },
+  {
+    "theme": "food",
+    "subtheme": "texture",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "chewy"
+  },
+  {
+    "theme": "food",
+    "subtheme": "texture",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "crispy"
+  },
+  {
+    "theme": "food",
+    "subtheme": "texture",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "juicy"
+  },
+  {
+    "theme": "food",
+    "subtheme": "texture",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "tender"
+  },
+  {
+    "theme": "food",
+    "subtheme": "texture",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "soft"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "big portion"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good portion"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "sufficient"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "generous portion"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "enough quantity"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "quantity sufficient"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good quantity"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "proper quantity"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good amount"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "too good amount"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "small amount"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "less amount"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "amount small"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "very small amount"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "too small amount"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "quantity less"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "quantity small"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "quantity little"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "quantity too less"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "should be more"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "could be more"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "need more quantity"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "portion less"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "less portion"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "too less"
+  },
+  {
+    "theme": "food",
+    "subtheme": "portion_size",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "too small"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "value for money"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "worth money"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "worth price"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "reasonable price"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "waste money"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "overpriced"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "not worth"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price high"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "not worth the price"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "not worth price"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price not justified"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "quantity against price"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "poor quantity for price"
+  },
+  {
+    "theme": "food",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "size against price"
+  },
+  {
+    "theme": "food",
+    "subtheme": "ingredients_quality",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "quality ingredients"
+  },
+  {
+    "theme": "food",
+    "subtheme": "ingredients_quality",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good quality"
+  },
+  {
+    "theme": "food",
+    "subtheme": "ingredients_quality",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "fresh ingredients"
+  },
+  {
+    "theme": "food",
+    "subtheme": "ingredients_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "low quality"
+  },
+  {
+    "theme": "food",
+    "subtheme": "ingredients_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "poor quality"
+  },
+  {
+    "theme": "food",
+    "subtheme": "ingredients_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "quality bad"
+  },
+  {
+    "theme": "food",
+    "subtheme": "ingredients_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "cheap quality"
+  },
+  {
+    "theme": "food",
+    "subtheme": "ingredients_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "poor ingredients"
+  },
+  {
+    "theme": "food",
+    "subtheme": "ingredients_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "ingredients not good"
+  },
+  {
+    "theme": "food",
+    "subtheme": "ingredients_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "quality not good"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "polite"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "friendly"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "helpful"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "welcoming"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "hospitable"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "courteous"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "attentive"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good behavior"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "rude"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "unprofessional"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "arrogant"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "aggressive"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "misbehaved"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "attitude problem"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad behavior"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "behavior rude"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "staff was rude"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "waiter was rude"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "behavior was bad"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad attitude"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_attitude",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad behaviour"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "service_speed",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "fast service"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "service_speed",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "quick service"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "service_speed",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "service fast"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "service_speed",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "timely service"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "service_speed",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "slow service"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "service_speed",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delayed"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "service_speed",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "service slow"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "service_speed",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "late service"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "service_speed",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "waited long"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "service_speed",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "took long"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_responsiveness",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "attentive"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_responsiveness",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "responsive"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_responsiveness",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "helped"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_responsiveness",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "listened"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_responsiveness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "ignored"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_responsiveness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "didn't respond"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_responsiveness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "no response"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "staff_responsiveness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "not attentive"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "actors",
+    "polarity": "service_staff",
+    "severity": null,
+    "phrase": "waiter"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "actors",
+    "polarity": "service_staff",
+    "severity": null,
+    "phrase": "waitress"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "actors",
+    "polarity": "service_staff",
+    "severity": null,
+    "phrase": "staff"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "actors",
+    "polarity": "service_staff",
+    "severity": null,
+    "phrase": "manager"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "actors",
+    "polarity": "service_staff",
+    "severity": null,
+    "phrase": "owner"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "actors",
+    "polarity": "delivery_staff",
+    "severity": null,
+    "phrase": "delivery man"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "actors",
+    "polarity": "delivery_staff",
+    "severity": null,
+    "phrase": "delivery boy"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "actors",
+    "polarity": "delivery_staff",
+    "severity": null,
+    "phrase": "delivery partner"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "actors",
+    "polarity": "delivery_staff",
+    "severity": null,
+    "phrase": "delivery guy"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "conflict_behavior",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "argued"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "conflict_behavior",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "shouting"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "conflict_behavior",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "arguing"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "conflict_behavior",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "misbehaved staff"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "conflict_behavior",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "rude staff"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "conflict_behavior",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "manager rude"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "overall_service_experience",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good service"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "overall_service_experience",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "excellent service"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "overall_service_experience",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "great service"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "overall_service_experience",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "service good"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "overall_service_experience",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad service"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "overall_service_experience",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "poor service"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "overall_service_experience",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "service bad"
+  },
+  {
+    "theme": "service_staff_behavior",
+    "subtheme": "overall_service_experience",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "worst service"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "overall_hygiene",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "clean"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "overall_hygiene",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "hygienic"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "overall_hygiene",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "cleanliness"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "overall_hygiene",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "sanitation"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "overall_hygiene",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "maintain hygiene"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "overall_hygiene",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "hygienic food"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "overall_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "dirty"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "overall_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "unhygienic"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "overall_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "filthy"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "overall_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "poor hygiene"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "overall_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad hygiene"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "smell_odor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad smell"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "smell_odor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "foul smell"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "smell_odor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "odor"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "smell_odor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "stinking"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "smell_odor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "smelly"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "smell_odor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "smelled bad"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "smell_odor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "rotten smell"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "smell_odor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "smell coming"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "pests_insects",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "flies"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "pests_insects",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "insects"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "pests_insects",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "cockroach"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "pests_insects",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "cockroaches"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "pests_insects",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "rats"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "pests_insects",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bugs"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "pests_insects",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "insect found"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "pests_insects",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "cockroach food"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "dining_area_cleanliness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "dirty tables"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "dining_area_cleanliness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "sticky floor"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "dining_area_cleanliness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "messy"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "dining_area_cleanliness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "dirty place"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "dining_area_cleanliness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "unclean tables"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "dining_area_cleanliness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "floor dirty"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "washroom_cleanliness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "washroom dirty"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "washroom_cleanliness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "toilet dirty"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "washroom_cleanliness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "restroom dirty"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "washroom_cleanliness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bathroom dirty"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "washroom_cleanliness",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "washroom unhygienic"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "washroom_cleanliness",
+    "polarity": "neutral",
+    "severity": null,
+    "phrase": "washroom"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "washroom_cleanliness",
+    "polarity": "neutral",
+    "severity": null,
+    "phrase": "toilet"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "washroom_cleanliness",
+    "polarity": "neutral",
+    "severity": null,
+    "phrase": "restroom"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "washroom_cleanliness",
+    "polarity": "neutral",
+    "severity": null,
+    "phrase": "bathroom"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "food_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "unhygienic food"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "food_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "food poisoning"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "food_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "got sick"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "food_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "vomiting"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "food_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "diarrhea"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "food_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "hair in food"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "food_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "insect in food"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "food_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "expired food"
+  },
+  {
+    "theme": "hygiene_cleanliness",
+    "subtheme": "food_hygiene",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "rotten food"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "ambience"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "atmosphere"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "vibe"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "pleasant"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "relaxing"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "comfortable"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "cozy"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "nice ambience"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good atmosphere"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad ambience"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "unpleasant"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "awkward"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "boring"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "overall_vibe",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "uncomfortable"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "noise_crowd",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "noisy"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "noise_crowd",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "loud"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "noise_crowd",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "too loud"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "noise_crowd",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "music too loud"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "noise_crowd",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "crowded"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "noise_crowd",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "overcrowded"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "noise_crowd",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "cramped"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "noise_crowd",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "chaotic"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "lighting",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good lighting"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "lighting",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "bright"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "lighting",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "well lit"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "lighting",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad lighting"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "lighting",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "dim lights"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "lighting",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "too dark"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "lighting",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "poor lighting"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "interior_decor",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "interior"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "interior_decor",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "decor"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "interior_decor",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "beautiful decor"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "interior_decor",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "nice interior"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "interior_decor",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "well decorated"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "interior_decor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "poor decor"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "interior_decor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "old decor"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "interior_decor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad interior"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "interior_decor",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "cheap decor"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "seating_space",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "comfortable seating"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "seating_space",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "spacious"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "seating_space",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good seating"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "seating_space",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "bad seating"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "seating_space",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "small seating"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "seating_space",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "uncomfortable seating"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "seating_space",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "tight space"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "seating_space",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "cramped seating"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "ventilation_temperature",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good ventilation"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "ventilation_temperature",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "cool"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "ventilation_temperature",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "air conditioned"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "ventilation_temperature",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "AC working"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "ventilation_temperature",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "poor ventilation"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "ventilation_temperature",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "hot"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "ventilation_temperature",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "suffocating"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "ventilation_temperature",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "air conditioning not working"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "ventilation_temperature",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "AC not working"
+  },
+  {
+    "theme": "atmosphere_ambience",
+    "subtheme": "ventilation_temperature",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "no AC"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "waiting time"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "long wait"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "waited long"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delay"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delayed"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "slow"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "slow service"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "late"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "late service"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "food took long"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "took long"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "took hours"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "took hour"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "waited"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "waiting"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "took too long"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "took very long"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "waiting too much"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "waiting a lot"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "service very late"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "fast service"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "quick service"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "served quickly"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "no waiting"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "overall_wait",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "on time"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "queue"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "line"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "long line"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "crowded queue"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "reservation issue"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "booking issue"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "table not available"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "no table"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "table unavailable"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "reservation available"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "booking smooth"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "queue_reservation",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "table available"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "food_preparation_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "food delay"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "food_preparation_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "late food"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "food_preparation_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "food came late"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "food_preparation_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "food arrived late"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "food_preparation_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "order delayed"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "food_preparation_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "preparation slow"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "food_preparation_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "took long to prepare"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "billing_checkout_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "billing delay"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "billing_checkout_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "checkout slow"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "billing_checkout_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "slow checkout"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "billing_checkout_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "late bill"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "billing_checkout_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "took time to bill"
+  },
+  {
+    "theme": "wait_time",
+    "subtheme": "billing_checkout_delay",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "payment delay"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "expensive"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "overpriced"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "costly"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price too high"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "high price"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price high"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price increased"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price hike"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price too much"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "too costly"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "very expensive"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "high compared to quality"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "high compared to quantity"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "cheap"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "affordable"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "low price"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "reasonable price"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_level",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "budget friendly"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "not worth it"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "not worth money"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "waste money"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "money wasted"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price not justified"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price doesn\u2019t match quality"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "portion too small for price"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "small portion for price"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "value for money"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "worth the price"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "worth money"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good value"
+  },
+  {
+    "theme": "price",
+    "subtheme": "value_for_money",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "price justified"
+  },
+  {
+    "theme": "price",
+    "subtheme": "hidden_costs",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "hidden charges"
+  },
+  {
+    "theme": "price",
+    "subtheme": "hidden_costs",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "extra charges"
+  },
+  {
+    "theme": "price",
+    "subtheme": "hidden_costs",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "extra money"
+  },
+  {
+    "theme": "price",
+    "subtheme": "hidden_costs",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "additional charge"
+  },
+  {
+    "theme": "price",
+    "subtheme": "hidden_costs",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "service charge"
+  },
+  {
+    "theme": "price",
+    "subtheme": "hidden_costs",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "taxes high"
+  },
+  {
+    "theme": "price",
+    "subtheme": "hidden_costs",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delivery charge high"
+  },
+  {
+    "theme": "price",
+    "subtheme": "hidden_costs",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "charged extra"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_comparison",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price higher than others"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_comparison",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "costly compared"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_comparison",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "overpriced compared"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_comparison",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price compared to quantity"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_comparison",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "price compared to quality"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_comparison",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "better price"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_comparison",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "cheaper than others"
+  },
+  {
+    "theme": "price",
+    "subtheme": "price_comparison",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good compared price"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "late delivery"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delivery late"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delayed delivery"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "took long"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delivery took long"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delivery delay"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "slow delivery"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "took hours"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "long delivery time"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "fast delivery"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "on time delivery"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "quick delivery"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_time",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "delivered on time"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "food_condition_on_arrival",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "cold on arrival"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "food_condition_on_arrival",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "food cold"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "food_condition_on_arrival",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "cold food"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "food_condition_on_arrival",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "food arrived cold"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "food_condition_on_arrival",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "soggy"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "food_condition_on_arrival",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "spilled food"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "food_condition_on_arrival",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "leaked food"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "food_condition_on_arrival",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "damaged food"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "food_condition_on_arrival",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "hot on arrival"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "food_condition_on_arrival",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "food hot"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "food_condition_on_arrival",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "fresh on arrival"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "packaging_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "packaging bad"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "packaging_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "poor packaging"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "packaging_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "packaging poor"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "packaging_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "leaking package"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "packaging_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "spilled package"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "packaging_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "broken box"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "packaging_quality",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "packaging damaged"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "packaging_quality",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "good packaging"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "packaging_quality",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "packaging good"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "packaging_quality",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "proper packaging"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "packaging_quality",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "secure packaging"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "order_accuracy",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "wrong item delivered"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "order_accuracy",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "wrong order"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "order_accuracy",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "missing item"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "order_accuracy",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "item missing"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "order_accuracy",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delivered wrong"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "order_accuracy",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "incomplete order"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "order_accuracy",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "order correct"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "order_accuracy",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "received correct items"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_partner_behavior",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delivery partner rude"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_partner_behavior",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delivery boy rude"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_partner_behavior",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "delivery man rude"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_partner_behavior",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "rude delivery"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_partner_behavior",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "unprofessional delivery"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_partner_behavior",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "polite delivery"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_partner_behavior",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "delivery partner polite"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "delivery_partner_behavior",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "delivery guy helpful"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "takeaway_experience",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "takeaway delay"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "takeaway_experience",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "pickup delay"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "takeaway_experience",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "waited long for takeaway"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "takeaway_experience",
+    "polarity": "negative",
+    "severity": null,
+    "phrase": "takeaway took long"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "takeaway_experience",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "quick pickup"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "takeaway_experience",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "smooth takeaway"
+  },
+  {
+    "theme": "delivery_takeaway",
+    "subtheme": "takeaway_experience",
+    "polarity": "positive",
+    "severity": null,
+    "phrase": "pickup on time"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "angry"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "furious"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "frustrated"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "annoyed"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "irritated"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "upset"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "extremely disappointed"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "totally disappointed"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "worst experience"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "absolutely horrible"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "disgusting"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "never coming back"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "money wasted"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "total waste"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "scam"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "fraud"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "unacceptable"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "pathetic"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_negative",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "terrible experience"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_negative",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "disappointed"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_negative",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "not satisfied"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_negative",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "poor experience"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_negative",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "bad experience"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_negative",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "could be better"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_negative",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "not worth it"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_negative",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "unhappy"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_negative",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "regret"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_negative",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "let down"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_negative",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "okay"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_negative",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "average"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_negative",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "fine"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_negative",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "not bad"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_negative",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "mediocre"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_positive",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "okay"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_positive",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "fine"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_positive",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "decent"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_positive",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "satisfactory"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_positive",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "good"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_positive",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "okay overall"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "low_positive",
+    "polarity": "emotion",
+    "severity": 1,
+    "phrase": "fine overall"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_positive",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "happy"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_positive",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "satisfied"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_positive",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "good experience"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_positive",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "liked it"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_positive",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "nice"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_positive",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "pretty good"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_positive",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "everything was good"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "medium_positive",
+    "polarity": "emotion",
+    "severity": 2,
+    "phrase": "overall satisfied"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_positive",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "delighted"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_positive",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "loved it"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_positive",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "best experience"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_positive",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "amazing experience"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_positive",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "highly recommend"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_positive",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "excellent"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_positive",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "fantastic"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_positive",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "outstanding"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_positive",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "will order again"
+  },
+  {
+    "theme": "emotional_intensity",
+    "subtheme": "high_positive",
+    "polarity": "emotion",
+    "severity": 3,
+    "phrase": "definitely recommend"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "never again"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "never coming back"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "worst"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "worst experience"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "horrible"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "terrible"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "disgusting"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "pathetic"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "unacceptable"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "unsafe"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "threatening"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "intimidating"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "ruined my day"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "ruined experience"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "total waste"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "money wasted"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "complete waste"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "scam"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "fraud"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "cheating"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "absolutely horrible"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "extremely disappointed"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "totally disappointed"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "disgrace"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "shameful"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "never order again"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "do not recommend"
+  },
+  {
+    "theme": "strong_negative_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "avoid restaurant"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "excellent"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "outstanding"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "perfect"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "highly recommend"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "must visit"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "five stars"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "loved it"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "amazing experience"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "wonderful"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "absolutely amazing"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "fantastic"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "mind blowing"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "just perfect"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "best experience"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "best food"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "best restaurant"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "worth every penny"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "value for money"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "superb"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "awesome"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "finger licking"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "mouth watering"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "delicious food"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "great service"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "friendly staff"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "will come again"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "definitely recommend"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "regular customer"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "favorite place"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "top notch"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "exceptional"
+  },
+  {
+    "theme": "strong_positive_signals",
+    "subtheme": null,
+    "polarity": "signal",
+    "severity": 4,
+    "phrase": "outstanding service"
+  }
+]

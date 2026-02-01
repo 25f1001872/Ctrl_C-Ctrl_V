@@ -1,0 +1,11 @@
+review_id,theme,subtheme,phrase,rating,relevance_score
+14,food,texture,soggy,1,1.5787144147009806
+175,food,temperature,cold,1,0.8437960676697291
+23,food,salt_sweet_balance,too salty,1,0.8345488559176274
+23,food,salt_sweet_balance,salty,1,0.8345488559176274
+48,food,cooking_quality,undercooked,1,0.07925157512224705
+14,delivery_takeaway,food_condition_on_arrival,soggy,1,0.07893572073504904
+25,food,texture,rubbery,1,0.06
+200,food,temperature,cold food,1,0.03203430204859457
+175,delivery_takeaway,food_condition_on_arrival,food arrived cold,1,0.0030000000000000005
+200,delivery_takeaway,food_condition_on_arrival,cold food,1,0.0030000000000000005

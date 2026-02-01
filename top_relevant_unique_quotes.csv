@@ -1,0 +1,6 @@
+review_id,theme,subtheme,phrase,rating,relevance_score
+14,food,texture,soggy,1,1.5787144147009806
+175,food,temperature,cold,1,0.8437960676697291
+23,food,salt_sweet_balance,too salty,1,0.8345488559176274
+23,food,salt_sweet_balance,salty,1,0.8345488559176274
+48,food,cooking_quality,undercooked,1,0.07925157512224705
