@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DineSight – Quantitative Report</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0dccf2",
+            "primary-hover": "#0ab8da",
+            "accent-amber": "#ffb703",
+            "background-light": "#f0f4f5",
+            "background-dark": "#0f1619",
+            "surface-dark": "#182327",
+            "border-dark": "#2a3b42",
+            "text-light": "#e0e6e8",
+            "text-muted": "#94a3a8",
+            "success": "#10b981",
+            "warning": "#f59e0b",
+            "danger": "#ef4444",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "sans": ["Inter", "sans-serif"],
+          },
+          boxShadow: {
+            'neon': '0 0 15px -3px rgba(13, 204, 242, 0.15)',
+            'neon-hover': '0 0 25px -5px rgba(13, 204, 242, 0.3)',
+          }
+        },
+      },
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0f1619; }
+    ::-webkit-scrollbar-thumb { background: #2a3b42; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3c525b; }
+
+    .slide { min-height: 100vh; scroll-snap-align: start; }
+    .stat-card {
+      background: linear-gradient(135deg, rgba(13, 204, 242, 0.05) 0%, rgba(24, 35, 39, 0.5) 100%);
+      border: 1px solid rgba(13, 204, 242, 0.2);
+    }
+    .metric-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #94a3a8; }
+    .metric-value { font-size: 28px; font-weight: 700; color: #0dccf2; }
+    
+    table { border-collapse: collapse; width: 100%; }
+    thead { background-color: rgba(15, 22, 25, 0.8); border-bottom: 2px solid rgba(42, 59, 66, 0.8); }
+    tbody tr { border-bottom: 1px solid rgba(42, 59, 66, 0.4); }
+    tbody tr:hover { background-color: rgba(24, 35, 39, 0.6); }
+    th, td { padding: 12px 16px; text-align: left; }
+    th { font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #94a3a8; }
+    td { font-size: 14px; color: #e0e6e8; }
+
+    .progress-bar { height: 6px; background: rgba(42, 59, 66, 0.6); border-radius: 3px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #0dccf2, #10b981); border-radius: 3px; }
+    
+    /* Hide content until loaded */
+    .loading-cloak { opacity: 0; }
+  </style>
+</head>
+
+<body class="bg-background-dark text-text-light font-display antialiased overflow-x-hidden selection:bg-primary/30 selection:text-primary">
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 w-full border-b border-border-dark bg-background-dark/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="flex h-8 w-8 items-center justify-center rounded bg-gradient-to-br from-primary to-blue-600 text-white shadow-neon">
+            <span class="material-symbols-outlined text-[20px]">analytics</span>
+          </div>
+          <span class="text-xl font-bold tracking-tight">DineSight</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <button onclick="window.print()" class="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-bold text-background-dark transition-all hover:bg-primary-hover hover:shadow-neon">
+            <span class="material-symbols-outlined text-[18px] mr-2">download</span>
+            Print / Save PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Loading State -->
+  <div id="loadingMessage" class="fixed inset-0 flex items-center justify-center bg-background-dark z-40">
+    <div class="text-center">
+      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+      <p class="text-xl">Loading Data...</p>
+      <p class="text-sm text-text-muted mt-2">If this takes too long, ensure you are running on a Local Server.</p>
+    </div>
+  </div>
+
+  <!-- Main Scrollable Container (Starts hidden via inline style, revealed by JS) -->
+  <main class="flex-grow overflow-y-auto scroll-smooth loading-cloak transition-opacity duration-500" id="reportContainer" style="scroll-snap-type: y mandatory;">
+
+    <!-- SLIDE 1: EXECUTIVE SUMMARY & KEY METRICS -->
+    <section class="slide bg-gradient-to-b from-background-dark to-surface-dark px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12">
+          <span class="metric-label">Report Overview</span>
+          <h1 class="text-4xl sm:text-5xl font-black tracking-tight mt-2 mb-4">Quantitative Analysis</h1>
+          <p class="text-lg text-text-muted max-w-2xl">
+            Comprehensive statistical analysis of {{TOTAL_REVIEWS}} customer reviews across {{NUMBER_OF_CITIES}} cities, 
+            {{NUMBER_OF_RESTAURANTS}} restaurants, and {{NUMBER_OF_CUISINES}} cuisines from {{DATE_RANGE}}.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div class="stat-card rounded-xl p-6">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="metric-label">Total Reviews</p>
+                <p class="metric-value mt-2">{{TOTAL_REVIEWS}}</p>
+                <p class="text-sm text-text-muted mt-2">{{DATE_RANGE}}</p>
+              </div>
+              <span class="material-symbols-outlined text-4xl text-primary opacity-20">feed</span>
+            </div>
+          </div>
+
+          <div class="stat-card rounded-xl p-6">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="metric-label">Average Rating</p>
+                <p class="metric-value mt-2">{{AVERAGE_RATING}}</p>
+                <p class="text-sm text-text-muted mt-2">out of 5.0</p>
+              </div>
+              <span class="material-symbols-outlined text-4xl text-accent-amber opacity-20">star</span>
+            </div>
+          </div>
+
+          <div class="stat-card rounded-xl p-6">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="metric-label">Avg Likes/Review</p>
+                <p class="metric-value mt-2">{{AVG_LIKES_PER_REVIEW}}</p>
+                <p class="text-sm text-text-muted mt-2">{{REVIEWS_WITH_LIKES}}</p>
+              </div>
+              <span class="material-symbols-outlined text-4xl text-primary opacity-20">thumb_up</span>
+            </div>
+          </div>
+
+          <div class="stat-card rounded-xl p-6">
+            <p class="metric-label">Median Rating</p>
+            <p class="metric-value mt-2">{{MEDIAN_RATING}}</p>
+            <p class="text-sm text-text-muted mt-2">{{STD_DEV_RATING}} (std dev)</p>
+          </div>
+
+          <div class="stat-card rounded-xl p-6">
+            <p class="metric-label">Geographic Coverage</p>
+            <div class="flex gap-4 mt-3">
+              <div>
+                <p class="text-2xl font-bold text-primary">{{NUMBER_OF_CITIES}}</p>
+                <p class="text-xs text-text-muted">Cities</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-primary">{{NUMBER_OF_RESTAURANTS}}</p>
+                <p class="text-xs text-text-muted">Restaurants</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-primary">{{NUMBER_OF_CUISINES}}</p>
+                <p class="text-xs text-text-muted">Cuisines</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card rounded-xl p-6">
+            <p class="metric-label">Reviewer Base</p>
+            <p class="metric-value mt-2">{{NUMBER_OF_REVIEWERS}}</p>
+            <p class="text-sm text-text-muted mt-2">Unique reviewers</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h3 class="text-lg font-semibold mb-4">Rating Consistency</h3>
+            <div class="space-y-3">
+              <div>
+                <p class="text-sm text-text-muted mb-1">Coefficient of Variation (Rating)</p>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: {{CV_RATING_PERCENT}}%"></div>
+                </div>
+                <p class="text-xs text-text-muted mt-1">{{CV_RATING_PERCENT}}% variability</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h3 class="text-lg font-semibold mb-4">Engagement Spread</h3>
+            <div class="space-y-3">
+              <div>
+                <p class="text-sm text-text-muted mb-1">Coefficient of Variation (Likes)</p>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: {{CV_LIKES_PERCENT}}%"></div>
+                </div>
+                <p class="text-xs text-text-muted mt-1">{{CV_LIKES_PERCENT}}% variability</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: RATING & ENGAGEMENT DISTRIBUTION -->
+    <section class="slide bg-gradient-to-b from-surface-dark to-background-dark px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+          <span class="metric-label">Descriptive Statistics</span>
+          <h2 class="text-3xl font-black tracking-tight mt-2">Distribution Analysis</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h3 class="text-lg font-semibold mb-6">Rating Distribution</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center"><span class="text-sm">Min</span><span class="text-lg font-bold text-primary">{{RATING_MIN}}</span></div>
+              <div class="flex justify-between items-center"><span class="text-sm">25th Percentile</span><span class="text-lg font-bold text-primary">{{RATING_Q1}}</span></div>
+              <div class="flex justify-between items-center"><span class="text-sm">Median (50th)</span><span class="text-lg font-bold text-primary">{{RATING_MEDIAN}}</span></div>
+              <div class="flex justify-between items-center"><span class="text-sm">75th Percentile</span><span class="text-lg font-bold text-primary">{{RATING_Q3}}</span></div>
+              <div class="flex justify-between items-center"><span class="text-sm">Max</span><span class="text-lg font-bold text-primary">{{RATING_MAX}}</span></div>
+              <hr class="border-border-dark my-3" />
+              <div class="flex justify-between items-center"><span class="text-sm">Mean</span><span class="text-lg font-bold text-accent-amber">{{RATING_MEAN}}</span></div>
+              <div class="flex justify-between items-center"><span class="text-sm">Std Dev</span><span class="text-lg font-bold text-warning">{{RATING_STD}}</span></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h3 class="text-lg font-semibold mb-6">Engagement (Likes) Distribution</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center"><span class="text-sm">Min</span><span class="text-lg font-bold text-primary">{{LIKES_MIN}}</span></div>
+              <div class="flex justify-between items-center"><span class="text-sm">25th Percentile</span><span class="text-lg font-bold text-primary">{{LIKES_Q1}}</span></div>
+              <div class="flex justify-between items-center"><span class="text-sm">Median (50th)</span><span class="text-lg font-bold text-primary">{{LIKES_MEDIAN}}</span></div>
+              <div class="flex justify-between items-center"><span class="text-sm">75th Percentile</span><span class="text-lg font-bold text-primary">{{LIKES_Q3}}</span></div>
+              <div class="flex justify-between items-center"><span class="text-sm">Max</span><span class="text-lg font-bold text-primary">{{LIKES_MAX}}</span></div>
+              <hr class="border-border-dark my-3" />
+              <div class="flex justify-between items-center"><span class="text-sm">Mean</span><span class="text-lg font-bold text-accent-amber">{{LIKES_MEAN}}</span></div>
+              <div class="flex justify-between items-center"><span class="text-sm">Std Dev</span><span class="text-lg font-bold text-warning">{{LIKES_STD}}</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-border-dark bg-surface-dark p-6 mb-8">
+          <h3 class="text-lg font-semibold mb-6">Performance by City</h3>
+          <div class="overflow-x-auto">
+            <table>
+              <thead><tr><th>City</th><th>Reviews</th><th>Avg Rating</th><th>Median</th><th>Std Dev</th><th>Variability (%)</th></tr></thead>
+              <tbody>{{CITY_ROWS}}</tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: CUISINE & RESTAURANT ANALYSIS -->
+    <section class="slide bg-gradient-to-b from-background-dark to-surface-dark px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+          <span class="metric-label">Segment Performance</span>
+          <h2 class="text-3xl font-black tracking-tight mt-2">Cuisine & Restaurant Insights</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h3 class="text-lg font-semibold mb-6">Top 5 Cuisines by Rating</h3>
+            <div class="space-y-4">{{TOP_CUISINES_ROWS}}</div>
+          </div>
+
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h3 class="text-lg font-semibold mb-6">Full Cuisine Breakdown</h3>
+            <div class="overflow-x-auto max-h-72 overflow-y-auto">
+              <table>
+                <thead><tr><th>Cuisine</th><th>Reviews</th><th>Rating</th><th>CV (%)</th></tr></thead>
+                <tbody>{{CUISINE_ROWS}}</tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+          <h3 class="text-lg font-semibold mb-6">Top 20 Restaurants by Review Volume</h3>
+          <div class="overflow-x-auto">
+            <table>
+              <thead><tr><th>Restaurant</th><th>Reviews</th><th>Avg Rating</th><th>Median</th><th>Std Dev</th><th>Consistency</th></tr></thead>
+              <tbody>{{RESTAURANT_ROWS}}</tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: STATISTICAL TESTS & CORRELATIONS -->
+    <section class="slide bg-gradient-to-b from-surface-dark to-background-dark px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+          <span class="metric-label">Statistical Analysis</span>
+          <h2 class="text-3xl font-black tracking-tight mt-2">Hypothesis Testing & Correlations</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">location_city</span>ANOVA: City Effect</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between"><span class="text-text-muted">F-Statistic:</span><span class="font-bold text-primary">{{ANOVA_CITY_F}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">P-Value:</span><span class="font-bold {{ANOVA_CITY_SIG_CLASS}}">{{ANOVA_CITY_P}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Eta Squared:</span><span class="font-bold text-accent-amber">{{ANOVA_CITY_ETA}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Effect Size:</span><span class="font-bold">{{ANOVA_CITY_EFFECT}}</span></div>
+              <hr class="border-border-dark my-2" />
+              <div class="flex justify-between p-2 rounded bg-background-dark/50"><span>Significant?</span><span class="font-bold {{ANOVA_CITY_SIG_CLASS}}">{{ANOVA_CITY_SIG}}</span></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">restaurant_menu</span>ANOVA: Cuisine Effect</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between"><span class="text-text-muted">F-Statistic:</span><span class="font-bold text-primary">{{ANOVA_CUISINE_F}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">P-Value:</span><span class="font-bold {{ANOVA_CUISINE_SIG_CLASS}}">{{ANOVA_CUISINE_P}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Eta Squared:</span><span class="font-bold text-accent-amber">{{ANOVA_CUISINE_ETA}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Effect Size:</span><span class="font-bold">{{ANOVA_CUISINE_EFFECT}}</span></div>
+              <hr class="border-border-dark my-2" />
+              <div class="flex justify-between p-2 rounded bg-background-dark/50"><span>Significant?</span><span class="font-bold {{ANOVA_CUISINE_SIG_CLASS}}">{{ANOVA_CUISINE_SIG}}</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">compare_arrows</span>T-Test: Likes Impact</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between"><span class="text-text-muted">With Likes (n={{TTEST_N_WITH}}):</span><span class="font-bold text-primary">{{TTEST_MEAN_WITH}} avg</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Without Likes (n={{TTEST_N_WITHOUT}}):</span><span class="font-bold text-warning">{{TTEST_MEAN_WITHOUT}} avg</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Difference:</span><span class="font-bold">{{TTEST_DIFF}}</span></div>
+              <hr class="border-border-dark my-2" />
+              <div class="flex justify-between"><span class="text-text-muted">T-Statistic:</span><span class="font-bold">{{TTEST_T}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Cohen's d:</span><span class="font-bold text-accent-amber">{{TTEST_D}}</span></div>
+              <div class="flex justify-between p-2 rounded bg-background-dark/50"><span>Significant?</span><span class="font-bold {{TTEST_SIG_CLASS}}">{{TTEST_SIG}}</span></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">scatter_plot</span>Correlation: Rating vs Likes</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between"><span class="text-text-muted">Pearson r:</span><span class="font-bold text-primary">{{CORR_R}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">P-Value:</span><span class="font-bold {{CORR_SIG_CLASS}}">{{CORR_P}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Strength:</span><span class="font-bold">{{CORR_STRENGTH}}</span></div>
+              <hr class="border-border-dark my-2" />
+              <div class="p-3 rounded bg-background-dark/50"><p class="text-xs text-text-muted">Interpretation: There is a <strong>{{CORR_STRENGTH_DESC}}</strong> relationship between ratings and engagement (likes).</p></div>
+              <div class="flex justify-between p-2 rounded bg-background-dark/50"><span>Significant?</span><span class="font-bold {{CORR_SIG_CLASS}}">{{CORR_SIG}}</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: OUTLIERS & ANOMALIES -->
+    <section class="slide bg-gradient-to-b from-background-dark to-surface-dark px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+          <span class="metric-label">Data Quality</span>
+          <h2 class="text-3xl font-black tracking-tight mt-2">Outlier Detection & Anomalies</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-danger">warning</span>Rating Outliers (IQR)</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between"><span class="text-text-muted">Q1 / Q3:</span><span class="font-bold">{{RATING_IQR_Q1}} / {{RATING_IQR_Q3}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">IQR:</span><span class="font-bold text-primary">{{RATING_IQR_IQR}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Bounds:</span><span class="font-bold text-accent-amber">[{{RATING_IQR_LB}}, {{RATING_IQR_UB}}]</span></div>
+              <hr class="border-border-dark my-2" />
+              <div class="flex justify-between p-2 rounded {{RATING_IQR_CLASS}}"><span>Outliers Found:</span><span class="font-bold">{{RATING_IQR_COUNT}} ({{RATING_IQR_PCT}}%)</span></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-warning">thumb_up</span>Likes Outliers (IQR)</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between"><span class="text-text-muted">Q1 / Q3:</span><span class="font-bold">{{LIKES_IQR_Q1}} / {{LIKES_IQR_Q3}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">IQR:</span><span class="font-bold text-primary">{{LIKES_IQR_IQR}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Bounds:</span><span class="font-bold text-accent-amber">[{{LIKES_IQR_LB}}, {{LIKES_IQR_UB}}]</span></div>
+              <hr class="border-border-dark my-2" />
+              <div class="flex justify-between p-2 rounded {{LIKES_IQR_CLASS}}"><span>Outliers Found:</span><span class="font-bold">{{LIKES_IQR_COUNT}} ({{LIKES_IQR_PCT}}%)</span></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-danger">analytics</span>Rating Outliers (Z-Score)</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between"><span class="text-text-muted">Mean:</span><span class="font-bold">{{RATING_Z_MEAN}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Std Dev:</span><span class="font-bold">{{RATING_Z_STD}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Threshold:</span><span class="font-bold text-primary">{{RATING_Z_THRESH}}</span></div>
+              <hr class="border-border-dark my-2" />
+              <div class="flex justify-between p-2 rounded {{RATING_Z_CLASS}}"><span>Outliers Found:</span><span class="font-bold">{{RATING_Z_COUNT}} ({{RATING_Z_PCT}}%)</span></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-warning">trending_up</span>Likes Outliers (Z-Score)</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between"><span class="text-text-muted">Mean:</span><span class="font-bold">{{LIKES_Z_MEAN}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Std Dev:</span><span class="font-bold">{{LIKES_Z_STD}}</span></div>
+              <div class="flex justify-between"><span class="text-text-muted">Threshold:</span><span class="font-bold text-primary">{{LIKES_Z_THRESH}}</span></div>
+              <hr class="border-border-dark my-2" />
+              <div class="flex justify-between p-2 rounded {{LIKES_Z_CLASS}}"><span>Outliers Found:</span><span class="font-bold">{{LIKES_Z_COUNT}} ({{LIKES_Z_PCT}}%)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-border-dark bg-surface-dark p-6 mb-8">
+          <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-accent-amber">storefront</span>Restaurant-Level Rating Anomalies</h4>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+            <div class="p-3 rounded bg-background-dark/50"><p class="text-text-muted">Q1</p><p class="text-lg font-bold text-primary">{{REST_RATING_Q1}}</p></div>
+            <div class="p-3 rounded bg-background-dark/50"><p class="text-text-muted">Q3</p><p class="text-lg font-bold text-primary">{{REST_RATING_Q3}}</p></div>
+            <div class="p-3 rounded bg-background-dark/50"><p class="text-text-muted">Bounds</p><p class="text-sm font-bold text-accent-amber">[{{REST_RATING_LB}}, {{REST_RATING_UB}}]</p></div>
+            <div class="p-3 rounded {{REST_RATING_CLASS}}"><p class="text-text-muted text-xs">Anomalies</p><p class="text-lg font-bold">{{REST_RATING_COUNT}}</p></div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+          <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">flag</span>Multivariate Anomalies Summary</h4>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="p-4 rounded-lg bg-background-dark/50 text-center"><p class="text-3xl font-bold text-primary">{{ANOMALY_COUNT}}</p><p class="text-xs text-text-muted mt-1">Total Anomalies</p></div>
+            <div class="p-4 rounded-lg bg-background-dark/50 text-center"><p class="text-3xl font-bold text-accent-amber">{{ANOMALY_PERCENT}}%</p><p class="text-xs text-text-muted mt-1">of Dataset</p></div>
+            <div class="p-4 rounded-lg bg-background-dark/50 text-center"><p class="text-3xl font-bold text-warning">{{ANOMALY_QUALITY_SCORE}}</p><p class="text-xs text-text-muted mt-1">Data Quality</p></div>
+            <div class="p-4 rounded-lg bg-background-dark/50 text-center"><p class="text-3xl font-bold text-success">✓</p><p class="text-xs text-text-muted mt-1">Safe for Analysis</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: TIME SERIES TRENDS -->
+    <section class="slide bg-gradient-to-b from-surface-dark to-background-dark px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+          <span class="metric-label">Temporal Analysis</span>
+          <h2 class="text-3xl font-black tracking-tight mt-2">Time Series Trends</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h4 class="font-semibold mb-6">Top 5 Days by Average Rating</h4>
+            <div class="space-y-3">{{TOP_DAYS_ROWS}}</div>
+          </div>
+
+          <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+            <h4 class="font-semibold mb-6">Top 5 Months by Average Rating</h4>
+            <div class="space-y-3">{{TOP_MONTHS_ROWS}}</div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+          <h4 class="font-semibold mb-6">Top Cities by Month (Performance)</h4>
+          <div class="overflow-x-auto">
+            <table>
+              <thead><tr><th>Month</th><th>City</th><th>Avg Rating</th><th>Review Count</th><th>Avg Likes</th></tr></thead>
+              <tbody>{{TOP_CITIES_MONTHLY_ROWS}}</tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="slide bg-background-dark px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-7xl mx-auto text-center">
+        <h3 class="text-2xl font-bold mb-4">Report Generation Complete</h3>
+        <p class="text-text-muted mb-8">This quantitative analysis report was auto-generated from {{TOTAL_REVIEWS}} reviews.<br />Generated at: {{GENERATED_AT}}</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    function injectReportData(reportData) {
+      if (!reportData) {
+        console.error("Report Data is empty or invalid");
+        return;
+      }
+      
+      const container = document.getElementById('reportContainer');
+      let htmlContent = container.innerHTML;
+
+      // --- DATA EXTRACTION ---
+      const insights = reportData.stage_1_descriptive_statistics?.key_insights || {};
+      const overall = reportData.stage_1_descriptive_statistics?.overall_stats || {};
+      const byCity = reportData.stage_1_descriptive_statistics?.by_city || {};
+      const byCuisine = reportData.stage_1_descriptive_statistics?.by_cuisine || {};
+      const byRestaurant = reportData.stage_1_descriptive_statistics?.by_restaurant_top20 || {};
+      const anovaCity = reportData.stage_2_statistical_tests?.anova_by_city || {};
+      const anovaCuisine = reportData.stage_2_statistical_tests?.anova_by_cuisine || {};
+      const ttestLikes = reportData.stage_2_statistical_tests?.ttest_likes_comparison || {};
+      const corrRatingLikes = reportData.stage_2_statistical_tests?.correlation_rating_likes || {};
+      const outliers = reportData.stage_3_outlier_detection || {};
+      const timeSeries = reportData.stage_4_time_series || {};
+
+      // --- REPLACEMENTS ---
+      
+      // General Metrics
+      htmlContent = htmlContent.replace(/{{TOTAL_REVIEWS}}/g, insights["Total Reviews"] || 0);
+      htmlContent = htmlContent.replace(/{{NUMBER_OF_CITIES}}/g, insights["Number of Cities"] || 0);
+      htmlContent = htmlContent.replace(/{{NUMBER_OF_RESTAURANTS}}/g, insights["Number of Restaurants"] || 0);
+      htmlContent = htmlContent.replace(/{{NUMBER_OF_CUISINES}}/g, insights["Number of Cuisines"] || 0);
+      htmlContent = htmlContent.replace(/{{NUMBER_OF_REVIEWERS}}/g, insights["Number of Reviewers"] || 0);
+      htmlContent = htmlContent.replace(/{{DATE_RANGE}}/g, insights["Date Range"] || "N/A");
+      htmlContent = htmlContent.replace(/{{AVERAGE_RATING}}/g, insights["Average Rating"] || "0.0");
+      htmlContent = htmlContent.replace(/{{MEDIAN_RATING}}/g, insights["Median Rating"] || "0.0");
+      htmlContent = htmlContent.replace(/{{STD_DEV_RATING}}/g, insights["Std Dev Rating"] || "0.0");
+      htmlContent = htmlContent.replace(/{{AVG_LIKES_PER_REVIEW}}/g, Math.round(insights["Avg Likes per Review"] || 0));
+      htmlContent = htmlContent.replace(/{{REVIEWS_WITH_LIKES}}/g, insights["Reviews with Likes"] || 0);
+      htmlContent = htmlContent.replace(/{{CV_RATING_PERCENT}}/g, Math.min(100, Math.round(insights["CV Rating (%)"] || 0)));
+      htmlContent = htmlContent.replace(/{{CV_LIKES_PERCENT}}/g, Math.min(100, Math.round(insights["CV Likes (%)"] || 0)));
+
+      // Rating & Likes Distribution
+      const ro = overall.rating_overall || {};
+      const lo = overall.like_count || {};
+      
+      htmlContent = htmlContent.replace(/{{RATING_MIN}}/g, (ro.min || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_Q1}}/g, (ro["25%"] || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_MEDIAN}}/g, (ro["50%"] || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_Q3}}/g, (ro["75%"] || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_MAX}}/g, (ro.max || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_MEAN}}/g, (ro.mean || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_STD}}/g, (ro.std || 0).toFixed(2));
+
+      htmlContent = htmlContent.replace(/{{LIKES_MIN}}/g, Math.round(lo.min || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_Q1}}/g, Math.round(lo["25%"] || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_MEDIAN}}/g, Math.round(lo["50%"] || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_Q3}}/g, Math.round(lo["75%"] || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_MAX}}/g, Math.round(lo.max || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_MEAN}}/g, Math.round(lo.mean || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_STD}}/g, Math.round(lo.std || 0));
+
+      // City Rows
+      let cityRows = '';
+      Object.entries(byCity).forEach(([city, stats]) => {
+        cityRows += `<tr><td>${city}</td><td>${stats.count}</td><td>${stats.mean.toFixed(2)}</td><td>${stats.median.toFixed(2)}</td><td>${stats.std.toFixed(2)}</td><td>${(stats["cv_%"] || 0).toFixed(1)}</td></tr>`;
+      });
+      htmlContent = htmlContent.replace(/{{CITY_ROWS}}/g, cityRows);
+
+      // Cuisine Rows
+      let cuisineRows = '';
+      Object.entries(byCuisine).forEach(([cuisine, stats]) => {
+        cuisineRows += `<tr><td>${cuisine}</td><td>${stats.count}</td><td>${stats.mean.toFixed(2)}</td><td>${(stats["cv_%"] || 0).toFixed(1)}</td></tr>`;
+      });
+      htmlContent = htmlContent.replace(/{{CUISINE_ROWS}}/g, cuisineRows);
+
+      // Top Cuisines (Box style)
+      let topCuisineRows = '';
+      if (Array.isArray(timeSeries.cuisine_overall_top)) {
+        timeSeries.cuisine_overall_top.forEach(item => {
+          topCuisineRows += `<div class="flex items-center justify-between p-3 rounded-lg bg-background-dark/50"><div><p class="font-medium">${item.primary_cuisine}</p><p class="text-xs text-text-muted">${item.rating_count} reviews</p></div><p class="text-lg font-bold text-primary">${item.mean_rating.toFixed(2)}</p></div>`;
+        });
+      }
+      htmlContent = htmlContent.replace(/{{TOP_CUISINES_ROWS}}/g, topCuisineRows);
+
+      // Restaurant Rows
+      let restaurantRows = '';
+      Object.entries(byRestaurant).slice(0, 20).forEach(([rest, stats]) => {
+        const cv = stats["cv_%"] || 0;
+        restaurantRows += `<tr><td>${rest}</td><td>${stats.count}</td><td>${stats.mean.toFixed(2)}</td><td>${stats.median.toFixed(2)}</td><td>${stats.std.toFixed(2)}</td><td><div class="progress-bar"><div class="progress-fill" style="width: ${Math.max(0, 100 - cv)}%"></div></div></td></tr>`;
+      });
+      htmlContent = htmlContent.replace(/{{RESTAURANT_ROWS}}/g, restaurantRows);
+
+      // ANOVA & Statistical Tests
+      htmlContent = htmlContent.replace(/{{ANOVA_CITY_F}}/g, (anovaCity.F_statistic || 0).toFixed(4));
+      htmlContent = htmlContent.replace(/{{ANOVA_CITY_P}}/g, (anovaCity.p_value || 0).toFixed(4));
+      htmlContent = htmlContent.replace(/{{ANOVA_CITY_ETA}}/g, (anovaCity.eta_squared || 0).toFixed(6));
+      htmlContent = htmlContent.replace(/{{ANOVA_CITY_EFFECT}}/g, anovaCity.effect_size || "-");
+      htmlContent = htmlContent.replace(/{{ANOVA_CITY_SIG}}/g, anovaCity.significant || "-");
+      htmlContent = htmlContent.replace(/{{ANOVA_CITY_SIG_CLASS}}/g, anovaCity.p_value < 0.05 ? 'text-success' : 'text-warning');
+
+      htmlContent = htmlContent.replace(/{{ANOVA_CUISINE_F}}/g, (anovaCuisine.F_statistic || 0).toFixed(4));
+      htmlContent = htmlContent.replace(/{{ANOVA_CUISINE_P}}/g, (anovaCuisine.p_value || 0).toFixed(4));
+      htmlContent = htmlContent.replace(/{{ANOVA_CUISINE_ETA}}/g, (anovaCuisine.eta_squared || 0).toFixed(6));
+      htmlContent = htmlContent.replace(/{{ANOVA_CUISINE_EFFECT}}/g, anovaCuisine.effect_size || "-");
+      htmlContent = htmlContent.replace(/{{ANOVA_CUISINE_SIG}}/g, anovaCuisine.significant || "-");
+      htmlContent = htmlContent.replace(/{{ANOVA_CUISINE_SIG_CLASS}}/g, anovaCuisine.p_value < 0.05 ? 'text-success' : 'text-warning');
+
+      htmlContent = htmlContent.replace(/{{TTEST_MEAN_WITH}}/g, (ttestLikes.mean_with_likes || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{TTEST_MEAN_WITHOUT}}/g, (ttestLikes.mean_without_likes || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{TTEST_DIFF}}/g, (ttestLikes.mean_difference || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{TTEST_T}}/g, (ttestLikes.t_statistic || 0).toFixed(4));
+      htmlContent = htmlContent.replace(/{{TTEST_D}}/g, (ttestLikes.cohens_d || 0).toFixed(4));
+      htmlContent = htmlContent.replace(/{{TTEST_SIG}}/g, ttestLikes.significant || "-");
+      htmlContent = htmlContent.replace(/{{TTEST_N_WITH}}/g, ttestLikes.n_with_likes || 0);
+      htmlContent = htmlContent.replace(/{{TTEST_N_WITHOUT}}/g, ttestLikes.n_without_likes || 0);
+      htmlContent = htmlContent.replace(/{{TTEST_SIG_CLASS}}/g, ttestLikes.p_value < 0.05 ? 'text-success' : 'text-warning');
+
+      htmlContent = htmlContent.replace(/{{CORR_R}}/g, (corrRatingLikes.pearson_r || 0).toFixed(4));
+      htmlContent = htmlContent.replace(/{{CORR_P}}/g, (corrRatingLikes.p_value || 0).toFixed(4));
+      htmlContent = htmlContent.replace(/{{CORR_STRENGTH}}/g, corrRatingLikes.strength || "-");
+      htmlContent = htmlContent.replace(/{{CORR_SIG}}/g, corrRatingLikes.significant || "-");
+      htmlContent = htmlContent.replace(/{{CORR_SIG_CLASS}}/g, corrRatingLikes.p_value < 0.05 ? 'text-success' : 'text-warning');
+      htmlContent = htmlContent.replace(/{{CORR_STRENGTH_DESC}}/g, Math.abs(corrRatingLikes.pearson_r) < 0.1 ? 'negligible' : 'weak');
+
+      // Outliers
+      const rIQR = outliers.rating_outliers_iqr || {};
+      htmlContent = htmlContent.replace(/{{RATING_IQR_Q1}}/g, (rIQR.Q1 || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_IQR_Q3}}/g, (rIQR.Q3 || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_IQR_IQR}}/g, (rIQR.IQR || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_IQR_LB}}/g, (rIQR.lower_bound || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_IQR_UB}}/g, (rIQR.upper_bound || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_IQR_COUNT}}/g, rIQR.outlier_count || 0);
+      htmlContent = htmlContent.replace(/{{RATING_IQR_PCT}}/g, (rIQR.outlier_percentage || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_IQR_CLASS}}/g, rIQR.outlier_count === 0 ? 'bg-success/10 text-success' : 'bg-warning/10 text-warning');
+
+      const lIQR = outliers.likes_outliers_iqr || {};
+      htmlContent = htmlContent.replace(/{{LIKES_IQR_Q1}}/g, Math.round(lIQR.Q1 || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_IQR_Q3}}/g, Math.round(lIQR.Q3 || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_IQR_IQR}}/g, Math.round(lIQR.IQR || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_IQR_LB}}/g, Math.round(lIQR.lower_bound || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_IQR_UB}}/g, Math.round(lIQR.upper_bound || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_IQR_COUNT}}/g, lIQR.outlier_count || 0);
+      htmlContent = htmlContent.replace(/{{LIKES_IQR_PCT}}/g, (lIQR.outlier_percentage || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{LIKES_IQR_CLASS}}/g, lIQR.outlier_count === 0 ? 'bg-success/10 text-success' : 'bg-warning/10 text-warning');
+
+      const rZ = outliers.rating_outliers_zscore || {};
+      htmlContent = htmlContent.replace(/{{RATING_Z_MEAN}}/g, (rZ.mean || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_Z_STD}}/g, (rZ.std_dev || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_Z_THRESH}}/g, rZ.threshold || 0);
+      htmlContent = htmlContent.replace(/{{RATING_Z_COUNT}}/g, rZ.outlier_count || 0);
+      htmlContent = htmlContent.replace(/{{RATING_Z_PCT}}/g, (rZ.outlier_percentage || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{RATING_Z_CLASS}}/g, rZ.outlier_count === 0 ? 'bg-success/10 text-success' : 'bg-warning/10 text-warning');
+
+      const lZ = outliers.likes_outliers_zscore || {};
+      htmlContent = htmlContent.replace(/{{LIKES_Z_MEAN}}/g, Math.round(lZ.mean || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_Z_STD}}/g, Math.round(lZ.std_dev || 0));
+      htmlContent = htmlContent.replace(/{{LIKES_Z_THRESH}}/g, lZ.threshold || 0);
+      htmlContent = htmlContent.replace(/{{LIKES_Z_COUNT}}/g, lZ.outlier_count || 0);
+      htmlContent = htmlContent.replace(/{{LIKES_Z_PCT}}/g, (lZ.outlier_percentage || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{LIKES_Z_CLASS}}/g, lZ.outlier_count === 0 ? 'bg-success/10 text-success' : 'bg-warning/10 text-warning');
+
+      const rrIQR = outliers.restaurant_rating_outliers_iqr || {};
+      htmlContent = htmlContent.replace(/{{REST_RATING_Q1}}/g, (rrIQR.Q1 || 0).toFixed(3));
+      htmlContent = htmlContent.replace(/{{REST_RATING_Q3}}/g, (rrIQR.Q3 || 0).toFixed(3));
+      htmlContent = htmlContent.replace(/{{REST_RATING_LB}}/g, (rrIQR.lower_bound || 0).toFixed(3));
+      htmlContent = htmlContent.replace(/{{REST_RATING_UB}}/g, (rrIQR.upper_bound || 0).toFixed(3));
+      htmlContent = htmlContent.replace(/{{REST_RATING_COUNT}}/g, rrIQR.outlier_count || 0);
+      htmlContent = htmlContent.replace(/{{REST_RATING_CLASS}}/g, rrIQR.outlier_count === 0 ? 'bg-success/10 text-success' : 'bg-warning/10 text-warning');
+
+      htmlContent = htmlContent.replace(/{{ANOMALY_COUNT}}/g, outliers.anomaly_count || 0);
+      htmlContent = htmlContent.replace(/{{ANOMALY_PERCENT}}/g, (outliers.anomaly_percentage || 0).toFixed(2));
+      htmlContent = htmlContent.replace(/{{ANOMALY_QUALITY_SCORE}}/g, Math.round(100 - (outliers.anomaly_percentage || 0)) + '%');
+
+      // Time Series
+      let topDaysRows = '';
+      if (Array.isArray(timeSeries.ts_daily_overall_top)) {
+        timeSeries.ts_daily_overall_top.slice(0, 5).forEach(item => {
+          const date = Object.keys(item)[0];
+          const val = Object.values(item)[0];
+          topDaysRows += `<div class="p-3 rounded-lg bg-background-dark/50 flex justify-between items-center"><div><p class="font-medium">${date}</p><p class="text-xs text-text-muted">${Math.round(val.rating_count)} reviews</p></div><p class="text-lg font-bold text-success">${val.mean_rating.toFixed(2)} ★</p></div>`;
+        });
+      }
+      htmlContent = htmlContent.replace(/{{TOP_DAYS_ROWS}}/g, topDaysRows);
+
+      let topMonthsRows = '';
+      if (Array.isArray(timeSeries.ts_monthly_overall_top)) {
+        timeSeries.ts_monthly_overall_top.slice(0, 5).forEach(item => {
+          const date = Object.keys(item)[0];
+          const val = Object.values(item)[0];
+          topMonthsRows += `<div class="p-3 rounded-lg bg-background-dark/50 flex justify-between items-center"><div><p class="font-medium">${date}</p><p class="text-xs text-text-muted">${Math.round(val.rating_count)} reviews</p></div><p class="text-lg font-bold text-success">${val.mean_rating.toFixed(2)} ★</p></div>`;
+        });
+      }
+      htmlContent = htmlContent.replace(/{{TOP_MONTHS_ROWS}}/g, topMonthsRows);
+
+      let topCitiesRows = '';
+      if (Array.isArray(timeSeries.ts_monthly_by_city_top)) {
+        timeSeries.ts_monthly_by_city_top.forEach(item => {
+          topCitiesRows += `<tr><td>${(item.created_at || '').substring(0, 7)}</td><td>${item.city}</td><td>${item.mean_rating.toFixed(2)}</td><td>${item.rating_count}</td><td>${Math.round(item.mean_likes)}</td></tr>`;
+        });
+      }
+      htmlContent = htmlContent.replace(/{{TOP_CITIES_MONTHLY_ROWS}}/g, topCitiesRows);
+
+      htmlContent = htmlContent.replace(/{{GENERATED_AT}}/g, new Date().toLocaleString());
+
+      // --- APPLY UPDATES ---
+      container.innerHTML = htmlContent;
+      
+      // Hide Loader, Show Content
+      document.getElementById('loadingMessage').style.display = 'none';
+      container.classList.remove('loading-cloak');
+    }
+
+    // MAIN LOAD FUNCTION
+    fetch('report_data.json')
+      .then(res => {
+        if (!res.ok) throw new Error("HTTP error " + res.status);
+        return res.json();
+      })
+      .then(data => injectReportData(data))
+      .catch(err => {
+        console.error('Failed to load report_data.json', err);
+        const loader = document.getElementById('loadingMessage');
+        loader.innerHTML = `<div class="text-danger p-6 border border-danger bg-surface-dark rounded-xl max-w-lg mx-auto"><h3 class="text-xl font-bold mb-2">Error Loading Data</h3><p>Could not load <code>report_data.json</code>.</p><br><p class="text-sm">1. Ensure the JSON file is in the same folder.<br>2. <strong>IMPORTANT:</strong> You must use a Local Server (VS Code "Live Server" extension, or <code>python -m http.server</code>).<br>Browsers block fetching local files (file://) for security.</p></div>`;
+      });
+  </script>
+</body>
+</html>

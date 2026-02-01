@@ -1,1208 +1,755 @@
 {
   "metadata": {
-    "total_reviews": 334119,
-    "date_range_start": "2022-11-10",
-    "date_range_end": "2023-11-10",
-    "generated_at": "2026-02-01T03:26:49.973019"
+    "total_reviews": 50000,
+    "date_range_start": "2023-01-01",
+    "date_range_end": "2023-12-14",
+    "generated_at": "2026-02-01T05:20:28.868308"
   },
   "stage_1_descriptive_statistics": {
     "key_insights": {
       "Dataset Scope": "MULTIPLE_CITIES",
-      "Total Reviews": 334119,
-      "Date Range": "2022-11-10 to 2023-11-10",
+      "Total Reviews": 50000,
+      "Date Range": "2023-01-01 to 2023-12-14",
       "Number of Cities": 7,
-      "Number of Restaurants": 5567,
-      "Number of Cuisines": 43,
-      "Number of Reviewers": 28207,
-      "Average Rating": 2.82,
+      "Number of Restaurants": 8,
+      "Number of Cuisines": 7,
+      "Number of Reviewers": 2000,
+      "Average Rating": 2.99,
       "Median Rating": 3.0,
-      "Std Dev Rating": 1.68,
-      "CV Rating (%)": 59.8,
+      "Std Dev Rating": 1.42,
+      "CV Rating (%)": 47.32,
       "Rating Range": "1 - 5",
-      "Avg Likes per Review": 0.24,
-      "CV Likes (%)": 260.21,
-      "Reviews with Likes": "60233 (18.0%)"
+      "Avg Likes per Review": 250.59,
+      "CV Likes (%)": 57.65,
+      "Reviews with Likes": "49895 (99.8%)"
     },
     "overall_stats": {
       "rating_overall": {
-        "count": 334119.0,
-        "mean": 2.8175620063510305,
-        "std": 1.6848855454487788,
+        "count": 50000.0,
+        "mean": 2.993,
+        "std": 1.4164148843550368,
         "min": 1.0,
-        "25%": 1.0,
+        "25%": 2.0,
         "50%": 3.0,
-        "75%": 5.0,
+        "75%": 4.0,
         "max": 5.0
       },
       "like_count": {
-        "count": 334119.0,
-        "mean": 0.24188387969555758,
-        "std": 0.6294106215616438,
-        "min": -2.0,
-        "25%": 0.0,
-        "50%": 0.0,
-        "75%": 0.0,
-        "max": 51.0
+        "count": 50000.0,
+        "mean": 250.58806,
+        "std": 144.46310642243142,
+        "min": 0.0,
+        "25%": 126.0,
+        "50%": 251.0,
+        "75%": 376.0,
+        "max": 500.0
       },
       "restaurant_overall_rating": {
-        "count": 334119.0,
-        "mean": 3.8414184766505346,
-        "std": 0.44570891748295904,
-        "min": 0.0,
-        "25%": 3.6,
-        "50%": 3.9,
-        "75%": 4.1,
-        "max": 5.0
+        "count": 50000.0,
+        "mean": 2.9925198,
+        "std": 0.017059027761527398,
+        "min": 2.96,
+        "25%": 2.99,
+        "50%": 2.99,
+        "75%": 3.0,
+        "max": 3.02
       },
       "restaurant_review_count": {
-        "count": 334119.0,
-        "mean": 4014.909981174372,
-        "std": 5812.797803275645,
-        "min": 0.0,
-        "25%": 488.0,
-        "50%": 1584.0,
-        "75%": 4697.0,
-        "max": 32993.0
+        "count": 50000.0,
+        "mean": 6251.45536,
+        "std": 95.66958252574751,
+        "min": 6131.0,
+        "25%": 6185.0,
+        "50%": 6201.0,
+        "75%": 6366.0,
+        "max": 6394.0
       },
       "cv_%": {
-        "rating_overall": 59.79941316822486,
-        "like_count": 260.2118927287917,
-        "restaurant_overall_rating": 11.60271707423004,
-        "restaurant_review_count": 144.78027727972585
+        "rating_overall": 47.32425273488262,
+        "like_count": 57.64963678733592,
+        "restaurant_overall_rating": 0.5700556354389834,
+        "restaurant_review_count": 1.5303569651619093
       }
     },
     "by_city": {
-      "Chittagong": {
-        "count": 38290,
-        "mean": 2.8038391224862886,
-        "std": 1.6673035606911208,
+      "Bangalore": {
+        "count": 7282,
+        "mean": 2.989425981873112,
+        "std": 1.4266955567297441,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 59.46502234452913
+        "cv_%": 47.72473262026733
       },
-      "Dhaka": {
-        "count": 266091,
-        "mean": 2.8228275289280735,
-        "std": 1.6865738875485758,
+      "Chennai": {
+        "count": 7276,
+        "mean": 3.030511269928532,
+        "std": 1.4242488342995254,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 59.74767747107196
+        "cv_%": 46.996981942690915
       },
-      "Gazipur": {
-        "count": 3187,
-        "mean": 2.656416692814559,
-        "std": 1.6776265142989806,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 63.15374085838473
-      },
-      "Moulvibazar": {
-        "count": 12,
-        "mean": 3.5,
-        "std": 1.5075567228888183,
+      "Delhi": {
+        "count": 7053,
+        "mean": 2.9812845597618036,
+        "std": 1.4284569159724938,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 43.073049225394804
+        "cv_%": 47.91414195250867
       },
-      "Narayanganj": {
-        "count": 6888,
-        "mean": 2.812282229965157,
-        "std": 1.6738701514942693,
+      "Hyderabad": {
+        "count": 7017,
+        "mean": 2.984466296137951,
+        "std": 1.408320831205997,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 59.519991758259906
+        "cv_%": 47.18836439963938
       },
-      "Savar": {
-        "count": 4830,
-        "mean": 2.7165631469979297,
-        "std": 1.6992180816761246,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 62.55028835070255
-      },
-      "Sylhet": {
-        "count": 14821,
-        "mean": 2.8279468321975574,
-        "std": 1.6990364901154547,
+      "Kolkata": {
+        "count": 7063,
+        "mean": 2.9943366841285575,
+        "std": 1.405665472864604,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 60.0802133466971
+        "cv_%": 46.944135584863105
+      },
+      "Mumbai": {
+        "count": 7207,
+        "mean": 2.9944498404329125,
+        "std": 1.4047507709577634,
+        "median": 3.0,
+        "min": 1,
+        "max": 5,
+        "cv_%": 46.91181505163153
+      },
+      "Pune": {
+        "count": 7102,
+        "mean": 2.975499859194593,
+        "std": 1.4160912112135475,
+        "median": 3.0,
+        "min": 1,
+        "max": 5,
+        "cv_%": 47.591708224676395
       }
     },
     "by_cuisine": {
-      "Asian": {
-        "count": 36,
-        "mean": 3.25,
-        "std": 1.6966353257466464,
+      "biryani": {
+        "count": 7104,
+        "mean": 2.9857826576576576,
+        "std": 1.412099723742459,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 52.20416386912758
+        "cv_%": 47.294123037416576
       },
-      "Bangladeshi": {
-        "count": 524,
-        "mean": 2.8740458015267176,
-        "std": 1.7224682270826643,
+      "chinese": {
+        "count": 7222,
+        "mean": 2.979230130157851,
+        "std": 1.416702771008298,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 59.93182941509403
+        "cv_%": 47.55264645948098
       },
-      "Bengali": {
-        "count": 178,
-        "mean": 2.337078651685393,
-        "std": 1.576263336747167,
-        "median": 1.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 67.44588315889321
-      },
-      "Beverage": {
-        "count": 12096,
-        "mean": 2.8664847883597884,
-        "std": 1.6640391480771335,
+      "curry": {
+        "count": 7131,
+        "mean": 2.988781377085963,
+        "std": 1.4045159837791088,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 58.051560393219525
+        "cv_%": 46.992931451831396
       },
-      "Biryani": {
-        "count": 1,
-        "mean": 4.0,
-        "std": NaN,
-        "median": 4.0,
-        "min": 4,
-        "max": 4,
-        "cv_%": NaN
-      },
-      "Burgers": {
-        "count": 9571,
-        "mean": 3.044404973357016,
-        "std": 1.6694478744385612,
+      "north indian": {
+        "count": 7089,
+        "mean": 3.023416560868952,
+        "std": 1.4237640104733522,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 54.836590041359976
+        "cv_%": 47.09122880719262
       },
-      "Cafe": {
-        "count": 4,
-        "mean": 4.0,
-        "std": 2.0,
-        "median": 5.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 50.0
-      },
-      "Cakes": {
-        "count": 17617,
-        "mean": 2.8811375376057216,
-        "std": 1.719800770846003,
+      "pizza": {
+        "count": 7286,
+        "mean": 2.9958825144111993,
+        "std": 1.4244591732406908,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 59.69172760406257
+        "cv_%": 47.547230787207596
       },
-      "Chicken": {
-        "count": 28367,
-        "mean": 2.798850777311665,
-        "std": 1.6879138547654342,
+      "south indian": {
+        "count": 6940,
+        "mean": 3.0103746397694526,
+        "std": 1.4179410115365272,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 60.30739003480203
+        "cv_%": 47.10181227294418
       },
-      "Chinese": {
-        "count": 1868,
-        "mean": 3.3741970021413277,
-        "std": 1.6617303556155225,
-        "median": 4.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 49.24817236696487
-      },
-      "Chotpoti & Fuchka": {
-        "count": 1402,
-        "mean": 3.0777460770328102,
-        "std": 1.722448184966786,
+      "street food": {
+        "count": 7228,
+        "mean": 2.9685943552850027,
+        "std": 1.4150875587886023,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 55.96459687887448
-      },
-      "Curry": {
-        "count": 49409,
-        "mean": 2.8493796676718817,
-        "std": 1.681155817510081,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 59.0007655555319
-      },
-      "Dessert": {
-        "count": 5676,
-        "mean": 3.2491190979563074,
-        "std": 1.6955887621432768,
-        "median": 4.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 52.18610678844615
-      },
-      "Dumpling": {
-        "count": 73,
-        "mean": 3.0136986301369864,
-        "std": 1.7598386185870336,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 58.39464507129703
-      },
-      "Fast Food": {
-        "count": 828,
-        "mean": 2.7681159420289854,
-        "std": 1.6521863646082116,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 59.68631369527048
-      },
-      "Fish": {
-        "count": 179,
-        "mean": 2.664804469273743,
-        "std": 1.6521832137100618,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 62.00016671993733
-      },
-      "Fried Chicken": {
-        "count": 136,
-        "mean": 3.0808823529411766,
-        "std": 1.6646883683844318,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 54.03284441534194
-      },
-      "Healthy": {
-        "count": 178,
-        "mean": 3.0168539325842696,
-        "std": 1.6311748187359416,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 54.06873700837944
-      },
-      "Ice Cream": {
-        "count": 1091,
-        "mean": 2.6434463794683776,
-        "std": 1.6317662636219321,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 61.72874457737615
-      },
-      "Indian": {
-        "count": 1574,
-        "mean": 2.280813214739517,
-        "std": 1.5534307865408343,
-        "median": 1.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 68.10863671351737
-      },
-      "Italian": {
-        "count": 30121,
-        "mean": 2.8476146210285185,
-        "std": 1.6789311474346018,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 58.95921221349101
-      },
-      "Japanese": {
-        "count": 53,
-        "mean": 2.6792452830188678,
-        "std": 1.6145204682893926,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 60.260270999533674
-      },
-      "Juice Corner": {
-        "count": 4097,
-        "mean": 3.067610446668294,
-        "std": 1.7147874710492255,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 55.899779351437594
-      },
-      "Kebab": {
-        "count": 3297,
-        "mean": 2.481346678798908,
-        "std": 1.6140973706156392,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 65.04924863610515
-      },
-      "Korean": {
-        "count": 28,
-        "mean": 2.75,
-        "std": 1.818118685772619,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 66.11340675536796
-      },
-      "Meat": {
-        "count": 44,
-        "mean": 2.840909090909091,
-        "std": 1.764549903980152,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 62.11215662010135
-      },
-      "Mexican": {
-        "count": 72,
-        "mean": 2.6666666666666665,
-        "std": 1.574443787321929,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 59.04164202457234
-      },
-      "Middle Eastern": {
-        "count": 750,
-        "mean": 2.348,
-        "std": 1.5885824264106247,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 67.6568324706399
-      },
-      "Noodles": {
-        "count": 41,
-        "mean": 2.902439024390244,
-        "std": 1.8276334157699745,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 62.968882392074754
-      },
-      "Pasta": {
-        "count": 1807,
-        "mean": 2.970116214720531,
-        "std": 1.8145447607019114,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 61.09339263253874
-      },
-      "Pizza": {
-        "count": 716,
-        "mean": 2.7164804469273744,
-        "std": 1.7053783825266364,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 62.77896770637901
-      },
-      "Rice Dishes": {
-        "count": 66758,
-        "mean": 2.7730459270799006,
-        "std": 1.6674498060566307,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 60.13062350584668
-      },
-      "Sandwiches": {
-        "count": 2415,
-        "mean": 2.908902691511387,
-        "std": 1.661987733977753,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 57.13452494742026
-      },
-      "Seafood": {
-        "count": 116,
-        "mean": 2.8620689655172415,
-        "std": 1.503020447222065,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 52.51517225233721
-      },
-      "Snacks": {
-        "count": 52392,
-        "mean": 2.7914376240647427,
-        "std": 1.7008870388320685,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 60.932296110393736
-      },
-      "Soups": {
-        "count": 315,
-        "mean": 2.9873015873015873,
-        "std": 1.6891836553478392,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 56.545467740124266
-      },
-      "Steak": {
-        "count": 1243,
-        "mean": 2.8600160901045855,
-        "std": 1.658832505572652,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 58.00081025110567
-      },
-      "Sushi": {
-        "count": 1299,
-        "mean": 2.8791377983063895,
-        "std": 1.6704687425929443,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 58.01975659433782
-      },
-      "Sweets": {
-        "count": 95,
-        "mean": 2.610526315789474,
-        "std": 1.6196580729389403,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 62.0433536004836
-      },
-      "Turkish": {
-        "count": 31411,
-        "mean": 2.6791251472414124,
-        "std": 1.6632142117409612,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 62.080497189670524
-      },
-      "Vegetarian": {
-        "count": 38,
-        "mean": 2.3157894736842106,
-        "std": 1.7722372966287212,
-        "median": 1.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 76.52842871805842
-      },
-      "Western": {
-        "count": 1678,
-        "mean": 2.4439809296781885,
-        "std": 1.6501087236526646,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 67.51725038500783
-      },
-      "Wraps": {
-        "count": 4525,
-        "mean": 2.9412154696132595,
-        "std": 1.6698265788620563,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 56.773350885497074
+        "cv_%": 47.668606398490084
       }
     },
     "by_restaurant_top20": {
-      "Restaurant 4645": {
-        "count": 1965,
-        "mean": 2.8478371501272264,
-        "std": 1.6466814291377778,
+      "Curry Nation": {
+        "count": 6394,
+        "mean": 2.9929621520175163,
+        "std": 1.4218625080651093,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 57.8221767022111
+        "cv_%": 47.50686563499143
       },
-      "Restaurant 728": {
-        "count": 1764,
-        "mean": 3.334467120181406,
-        "std": 1.5981172273029547,
-        "median": 4.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 47.92721504526372
-      },
-      "Restaurant 126": {
-        "count": 1615,
-        "mean": 2.6860681114551084,
-        "std": 1.668617792104062,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 62.12120180378192
-      },
-      "Restaurant 2478": {
-        "count": 1563,
-        "mean": 2.8995521433141396,
-        "std": 1.6520715445417176,
+      "Spice Villa": {
+        "count": 6366,
+        "mean": 2.9945020420986492,
+        "std": 1.39423161152048,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 56.976783409503625
+        "cv_%": 46.559714834702696
       },
-      "Restaurant 3560": {
-        "count": 1525,
-        "mean": 2.6485245901639343,
-        "std": 1.6568495347473655,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 62.557453342157274
-      },
-      "Restaurant 725": {
-        "count": 1392,
-        "mean": 3.2047413793103448,
-        "std": 1.6222413307593841,
-        "median": 4.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 50.62003883472457
-      },
-      "Restaurant 24": {
-        "count": 1323,
-        "mean": 2.8495842781557066,
-        "std": 1.6722952220366882,
+      "Biryani Blues": {
+        "count": 6349,
+        "mean": 3.000472515356749,
+        "std": 1.429337415648094,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 58.68558564335646
+        "cv_%": 47.63707743805642
       },
-      "Restaurant 726": {
-        "count": 1252,
-        "mean": 3.107827476038339,
-        "std": 1.6903457686325103,
+      "Wok & Roll": {
+        "count": 6201,
+        "mean": 3.010965973230124,
+        "std": 1.4192941404331232,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 54.38994865915967
+        "cv_%": 47.13750182007283
       },
-      "Restaurant 2477": {
-        "count": 1189,
-        "mean": 2.862910008410429,
-        "std": 1.6500827270789973,
+      "Masala Magic": {
+        "count": 6192,
+        "mean": 2.9570413436692506,
+        "std": 1.4156161726778076,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 57.636555890039
+        "cv_%": 47.872721688809314
       },
-      "Restaurant 4644": {
-        "count": 1121,
-        "mean": 3.033006244424621,
-        "std": 1.6652377481899359,
+      "The Hungry Fork": {
+        "count": 6185,
+        "mean": 3.0156831042845593,
+        "std": 1.4189782060473821,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 54.90386810943877
+        "cv_%": 47.05329296806272
       },
-      "Restaurant 2487": {
-        "count": 1088,
-        "mean": 2.7619485294117645,
-        "std": 1.621311798979536,
+      "Pizza Junction": {
+        "count": 6182,
+        "mean": 2.988676803623423,
+        "std": 1.4153117984583705,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 58.70173834574827
+        "cv_%": 47.355799621507074
       },
-      "Restaurant 3426": {
-        "count": 1076,
-        "mean": 2.8104089219330857,
-        "std": 1.658613436066922,
+      "Urban Tadka": {
+        "count": 6131,
+        "mean": 2.983363236013701,
+        "std": 1.4165361706244357,
         "median": 3.0,
         "min": 1,
         "max": 5,
-        "cv_%": 59.01680083359815
-      },
-      "Restaurant 729": {
-        "count": 1053,
-        "mean": 3.1965811965811968,
-        "std": 1.5961895251794145,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 49.93427124224371
-      },
-      "Restaurant 4643": {
-        "count": 1033,
-        "mean": 2.918683446272991,
-        "std": 1.6604057041024691,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 56.88885878400831
-      },
-      "Restaurant 3051": {
-        "count": 1005,
-        "mean": 2.5492537313432835,
-        "std": 1.7091306066466079,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 67.04435049491964
-      },
-      "Restaurant 731": {
-        "count": 1002,
-        "mean": 3.2385229540918163,
-        "std": 1.638690851340116,
-        "median": 4.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 50.59994554831421
-      },
-      "Restaurant 1916": {
-        "count": 906,
-        "mean": 2.5463576158940397,
-        "std": 1.6225459089547178,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 63.72026846610205
-      },
-      "Restaurant 4639": {
-        "count": 878,
-        "mean": 2.8712984054669706,
-        "std": 1.6419725322999652,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 57.18571532563941
-      },
-      "Restaurant 3580": {
-        "count": 856,
-        "mean": 2.871495327102804,
-        "std": 1.6954926438181033,
-        "median": 3.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 59.04563478878342
-      },
-      "Restaurant 2909": {
-        "count": 818,
-        "mean": 2.575794621026895,
-        "std": 1.6334181195767006,
-        "median": 2.0,
-        "min": 1,
-        "max": 5,
-        "cv_%": 63.414144367049886
+        "cv_%": 47.481183435014024
       }
     }
   },
   "stage_2_statistical_tests": {
     "anova_by_city": {
-      "F_statistic": 9.04234901465297,
-      "p_value": 6.568452167537901e-10,
-      "eta_squared": 0.0001623565917360466,
+      "F_statistic": 1.1641357855259729,
+      "p_value": 0.32227315610246043,
+      "eta_squared": 0.00013969633668969552,
       "effect_size": "Small",
       "n_groups": 7,
-      "significant": "Yes***"
+      "significant": "No"
     },
     "anova_by_cuisine": {
-      "F_statistic": 42.730025084398825,
-      "p_value": 0.0,
-      "eta_squared": 0.005216751992888587,
+      "F_statistic": 1.2366532720612136,
+      "p_value": 0.2837728180551128,
+      "eta_squared": 0.00014839714634984325,
       "effect_size": "Small",
-      "n_groups": 42,
-      "significant": "Yes***"
+      "n_groups": 7,
+      "significant": "No"
     },
     "ttest_likes_comparison": {
-      "t_statistic": -81.17184049643308,
-      "p_value": 0.0,
-      "cohens_d": -0.3617186117942864,
-      "effect_size": "Small",
-      "significant": "Yes***",
-      "mean_with_likes": 2.3227300649145817,
-      "mean_without_likes": 2.9263770528913913,
-      "mean_difference": -0.6036469879768096,
-      "n_with_likes": 60233,
-      "n_without_likes": 273882
+      "t_statistic": -0.5902548077499916,
+      "p_value": 0.5562950699310762,
+      "cohens_d": -0.05885635181619871,
+      "effect_size": "Negligible",
+      "significant": "No",
+      "mean_with_likes": 2.992824932357952,
+      "mean_without_likes": 3.0761904761904764,
+      "mean_difference": -0.08336554383252448,
+      "n_with_likes": 49895,
+      "n_without_likes": 105
     },
     "correlation_rating_likes": {
-      "pearson_r": -0.1332010137050214,
-      "p_value": 0.0,
-      "strength": "Weak",
-      "significant": "Yes***"
+      "pearson_r": -0.003841366802681658,
+      "p_value": 0.39037504063045364,
+      "strength": "Negligible",
+      "significant": "No"
     }
   },
   "stage_3_outlier_detection": {
     "rating_outliers_iqr": {
       "column": "rating_overall",
-      "Q1": 1.0,
-      "Q3": 5.0,
-      "IQR": 4.0,
-      "lower_bound": -5.0,
-      "upper_bound": 11.0,
+      "Q1": 2.0,
+      "Q3": 4.0,
+      "IQR": 2.0,
+      "lower_bound": -1.0,
+      "upper_bound": 7.0,
       "outlier_count": 0,
       "outlier_percentage": 0.0
     },
     "rating_outliers_zscore": {
       "column": "rating_overall",
-      "mean": 2.8175620063510305,
-      "std_dev": 1.6848855454487788,
+      "mean": 2.993,
+      "std_dev": 1.4164148843550368,
       "threshold": 3,
       "outlier_count": 0,
       "outlier_percentage": 0.0
     },
     "likes_outliers_iqr": {
       "column": "like_count_nonzero",
-      "Q1": 1.0,
-      "Q3": 1.0,
-      "IQR": 0.0,
-      "lower_bound": 1.0,
-      "upper_bound": 1.0,
-      "outlier_count": 13564,
-      "outlier_percentage": 22.51921704049275
+      "Q1": 127.0,
+      "Q3": 376.0,
+      "IQR": 249.0,
+      "lower_bound": -246.5,
+      "upper_bound": 749.5,
+      "outlier_count": 0,
+      "outlier_percentage": 0.0
     },
     "likes_outliers_zscore": {
       "column": "like_count",
-      "mean": 0.24188387969555758,
-      "std_dev": 0.6294106215616438,
+      "mean": 250.58806,
+      "std_dev": 144.46310642243142,
       "threshold": 3,
-      "outlier_count": 4122,
-      "outlier_percentage": 1.2336921875140294
+      "outlier_count": 0,
+      "outlier_percentage": 0.0
     },
     "restaurant_rating_outliers_iqr": {
       "column": "restaurant_overall_rating",
-      "Q1": 3.6,
-      "Q3": 4.1,
-      "IQR": 0.49999999999999956,
-      "lower_bound": 2.8500000000000005,
-      "upper_bound": 4.849999999999999,
-      "outlier_count": 10215,
-      "outlier_percentage": 3.0572939581406624
+      "Q1": 2.99,
+      "Q3": 3.0,
+      "IQR": 0.009999999999999787,
+      "lower_bound": 2.9750000000000005,
+      "upper_bound": 3.0149999999999997,
+      "outlier_count": 12377,
+      "outlier_percentage": 24.754
     },
-    "anomaly_count": 1247,
-    "anomaly_percentage": 0.37
+    "anomaly_count": 402,
+    "anomaly_percentage": 0.8
   },
   "stage_4_time_series": {
     "ts_daily_overall_top": {
-      "2022-11-10 00:00:00+00:00": {
-        "mean_rating": 3.0345911949685536,
-        "median_rating": 3.0,
-        "rating_count": 318,
-        "mean_likes": 0.0880503144654088,
-        "mean_rating_roll": 3.0345911949685536,
-        "delta_rating": NaN
+      "2023-02-02 00:00:00": {
+        "mean_rating": 3.361290322580645,
+        "median_rating": 4.0,
+        "rating_count": 155,
+        "mean_likes": 251.32903225806453,
+        "mean_rating_roll": 3.002858421794532,
+        "delta_rating": 0.4047685834502106
       },
-      "2023-01-29 00:00:00+00:00": {
-        "mean_rating": 3.1079545454545454,
+      "2023-02-18 00:00:00": {
+        "mean_rating": 3.2890625,
         "median_rating": 3.0,
-        "rating_count": 528,
-        "mean_likes": 0.36363636363636365,
-        "mean_rating_roll": 2.8769239585905018,
-        "delta_rating": 0.259711733952948
+        "rating_count": 128,
+        "mean_likes": 256.8125,
+        "mean_rating_roll": 3.0573670935434536,
+        "delta_rating": 0.35912619426751613
       },
-      "2023-05-08 00:00:00+00:00": {
-        "mean_rating": 3.020876826722338,
+      "2023-03-18 00:00:00": {
+        "mean_rating": 3.2847222222222223,
         "median_rating": 3.0,
-        "rating_count": 958,
-        "mean_likes": 0.2766179540709812,
-        "mean_rating_roll": 2.832320944424503,
-        "delta_rating": 0.24044451727978977
+        "rating_count": 144,
+        "mean_likes": 251.09722222222223,
+        "mean_rating_roll": 3.0322849309345163,
+        "delta_rating": 0.4356656184486374
       },
-      "2023-07-30 00:00:00+00:00": {
-        "mean_rating": 2.9926650366748166,
+      "2023-04-12 00:00:00": {
+        "mean_rating": 3.2549019607843137,
         "median_rating": 3.0,
-        "rating_count": 1227,
-        "mean_likes": 0.2273838630806846,
-        "mean_rating_roll": 2.828665634779856,
-        "delta_rating": 0.15772139738335111
+        "rating_count": 153,
+        "mean_likes": 254.09150326797385,
+        "mean_rating_roll": 3.085210866527038,
+        "delta_rating": 0.20662609871534832
       },
-      "2023-09-04 00:00:00+00:00": {
-        "mean_rating": 2.9991394148020656,
+      "2023-04-19 00:00:00": {
+        "mean_rating": 3.2684563758389262,
         "median_rating": 3.0,
-        "rating_count": 1162,
-        "mean_likes": 0.23924268502581755,
-        "mean_rating_roll": 2.875110095553311,
-        "delta_rating": 0.14604663129691087
+        "rating_count": 149,
+        "mean_likes": 239.5503355704698,
+        "mean_rating_roll": 3.0739667531576487,
+        "delta_rating": 0.28349396982388875
       },
-      "2023-10-09 00:00:00+00:00": {
-        "mean_rating": 2.9835661462612983,
+      "2023-04-30 00:00:00": {
+        "mean_rating": 3.256,
         "median_rating": 3.0,
-        "rating_count": 1217,
-        "mean_likes": 0.15776499589153656,
-        "mean_rating_roll": 2.8652189445886345,
-        "delta_rating": 0.12163478153663743
+        "rating_count": 125,
+        "mean_likes": 225.984,
+        "mean_rating_roll": 2.9783861650141956,
+        "delta_rating": 0.3589411764705881
       },
-      "2023-11-02 00:00:00+00:00": {
-        "mean_rating": 2.98203125,
-        "median_rating": 3.0,
-        "rating_count": 1280,
-        "mean_likes": 0.09375,
-        "mean_rating_roll": 2.919778141169343,
-        "delta_rating": 0.0042534722222220545
+      "2023-08-18 00:00:00": {
+        "mean_rating": 3.3360655737704916,
+        "median_rating": 4.0,
+        "rating_count": 122,
+        "mean_likes": 263.5327868852459,
+        "mean_rating_roll": 3.0690408787079706,
+        "delta_rating": 0.3430585807634987
       },
-      "2023-11-05 00:00:00+00:00": {
-        "mean_rating": 3.032948929159802,
+      "2023-08-28 00:00:00": {
+        "mean_rating": 3.2468354430379747,
         "median_rating": 3.0,
-        "rating_count": 1214,
-        "mean_likes": 0.0815485996705107,
-        "mean_rating_roll": 2.9468657924967494,
-        "delta_rating": 0.08136295253208914
+        "rating_count": 158,
+        "mean_likes": 263.1455696202532,
+        "mean_rating_roll": 3.0639604961062097,
+        "delta_rating": 0.00874020494273653
       },
-      "2023-11-08 00:00:00+00:00": {
-        "mean_rating": 3.009925558312655,
-        "median_rating": 3.0,
-        "rating_count": 1209,
-        "mean_likes": 0.04466501240694789,
-        "mean_rating_roll": 2.9617978726076304,
-        "delta_rating": 0.039527778479167885
+      "2023-09-17 00:00:00": {
+        "mean_rating": 3.342857142857143,
+        "median_rating": 4.0,
+        "rating_count": 140,
+        "mean_likes": 243.42857142857142,
+        "mean_rating_roll": 3.0462684732035767,
+        "delta_rating": 0.23251231527093585
       },
-      "2023-11-09 00:00:00+00:00": {
-        "mean_rating": 3.0439297124600637,
-        "median_rating": 3.0,
-        "rating_count": 1252,
-        "mean_likes": 0.035942492012779555,
-        "mean_rating_roll": 2.970640510101925,
-        "delta_rating": 0.03400415414740854
+      "2023-12-13 00:00:00": {
+        "mean_rating": 3.3076923076923075,
+        "median_rating": 4.0,
+        "rating_count": 143,
+        "mean_likes": 248.86013986013987,
+        "mean_rating_roll": 3.0280867950937562,
+        "delta_rating": 0.33228247162673386
       }
     },
     "ts_monthly_overall_top": {
-      "2023-09-30 00:00:00+00:00": {
-        "mean_rating": 2.8418198832984696,
+      "2023-04-30 00:00:00": {
+        "mean_rating": 3.034433962264151,
         "median_rating": 3.0,
-        "rating_count": 36332,
-        "mean_likes": 0.20378729494660355,
-        "mean_rating_roll": 2.8173124810214865,
-        "delta_rating": 0.012636462327235254
+        "rating_count": 4240,
+        "mean_likes": 248.86415094339623,
+        "mean_rating_roll": 2.9888721018130777,
+        "delta_rating": 0.08760415136314981
       },
-      "2023-10-31 00:00:00+00:00": {
-        "mean_rating": 2.8844769083326858,
+      "2023-08-31 00:00:00": {
+        "mean_rating": 3.0142986836132546,
         "median_rating": 3.0,
-        "rating_count": 38607,
-        "mean_likes": 0.13730670603776518,
-        "mean_rating_roll": 2.85182673753413,
-        "delta_rating": 0.0426570250342162
+        "rating_count": 4406,
+        "mean_likes": 251.22900590104402,
+        "mean_rating_roll": 2.981374814358869,
+        "delta_rating": 0.066393562797471
       },
-      "2023-11-30 00:00:00+00:00": {
-        "mean_rating": 2.972436974789916,
+      "2023-09-30 00:00:00": {
+        "mean_rating": 3.0175919579620745,
         "median_rating": 3.0,
-        "rating_count": 11900,
-        "mean_likes": 0.0661344537815126,
-        "mean_rating_roll": 2.8995779221403573,
-        "delta_rating": 0.0879600664572302
+        "rating_count": 4377,
+        "mean_likes": 252.49988576650674,
+        "mean_rating_roll": 2.993265254130371,
+        "delta_rating": 0.0032932743488198746
       }
     },
     "ts_monthly_by_city_top": [
       {
-        "created_at": "2022-11-30 00:00:00+00:00",
-        "city": "Narayanganj",
-        "mean_rating": 2.8860759493670884,
-        "rating_count": 237,
-        "mean_likes": 0.18565400843881857
+        "created_at": "2023-01-31 00:00:00",
+        "city": "Delhi",
+        "mean_rating": 3.08716323296355,
+        "rating_count": 631,
+        "mean_likes": 257.27416798732173
       },
       {
-        "created_at": "2022-11-30 00:00:00+00:00",
-        "city": "Sylhet",
-        "mean_rating": 2.842553191489362,
-        "rating_count": 705,
-        "mean_likes": 0.07234042553191489
+        "created_at": "2023-01-31 00:00:00",
+        "city": "Mumbai",
+        "mean_rating": 3.060031595576619,
+        "rating_count": 633,
+        "mean_likes": 250.61927330173776
       },
       {
-        "created_at": "2022-11-30 00:00:00+00:00",
-        "city": "Dhaka",
-        "mean_rating": 2.815508489410117,
-        "rating_count": 11426,
-        "mean_likes": 0.12497812007701734
+        "created_at": "2023-01-31 00:00:00",
+        "city": "Kolkata",
+        "mean_rating": 3.0445544554455446,
+        "rating_count": 606,
+        "mean_likes": 252.03135313531354
       },
       {
-        "created_at": "2022-12-31 00:00:00+00:00",
-        "city": "Sylhet",
-        "mean_rating": 2.8209424083769634,
-        "rating_count": 955,
-        "mean_likes": 0.10575916230366492
+        "created_at": "2023-02-28 00:00:00",
+        "city": "Pune",
+        "mean_rating": 3.046017699115044,
+        "rating_count": 565,
+        "mean_likes": 251.75221238938053
       },
       {
-        "created_at": "2022-12-31 00:00:00+00:00",
-        "city": "Savar",
-        "mean_rating": 2.7718631178707223,
-        "rating_count": 263,
-        "mean_likes": 0.12927756653992395
+        "created_at": "2023-02-28 00:00:00",
+        "city": "Chennai",
+        "mean_rating": 3.028725314183124,
+        "rating_count": 557,
+        "mean_likes": 263.61759425493716
       },
       {
-        "created_at": "2022-12-31 00:00:00+00:00",
-        "city": "Chittagong",
-        "mean_rating": 2.7694272163444,
-        "rating_count": 2741,
-        "mean_likes": 0.131703757752645
+        "created_at": "2023-02-28 00:00:00",
+        "city": "Bangalore",
+        "mean_rating": 2.9927797833935017,
+        "rating_count": 554,
+        "mean_likes": 249.80685920577616
       },
       {
-        "created_at": "2023-01-31 00:00:00+00:00",
-        "city": "Moulvibazar",
-        "mean_rating": 3.0,
-        "rating_count": 5,
-        "mean_likes": 0.0
+        "created_at": "2023-03-31 00:00:00",
+        "city": "Chennai",
+        "mean_rating": 3.044378698224852,
+        "rating_count": 676,
+        "mean_likes": 252.58727810650888
       },
       {
-        "created_at": "2023-01-31 00:00:00+00:00",
-        "city": "Sylhet",
-        "mean_rating": 2.855828220858896,
-        "rating_count": 978,
-        "mean_likes": 0.2474437627811861
+        "created_at": "2023-03-31 00:00:00",
+        "city": "Kolkata",
+        "mean_rating": 3.019261637239165,
+        "rating_count": 623,
+        "mean_likes": 244.85714285714286
       },
       {
-        "created_at": "2023-01-31 00:00:00+00:00",
-        "city": "Dhaka",
-        "mean_rating": 2.84098303911388,
-        "rating_count": 14445,
-        "mean_likes": 0.3071651090342679
+        "created_at": "2023-03-31 00:00:00",
+        "city": "Hyderabad",
+        "mean_rating": 2.9422776911076443,
+        "rating_count": 641,
+        "mean_likes": 242.2371294851794
       },
       {
-        "created_at": "2023-02-28 00:00:00+00:00",
-        "city": "Sylhet",
-        "mean_rating": 2.9272943980929678,
-        "rating_count": 839,
-        "mean_likes": 0.27532777115613827
+        "created_at": "2023-04-30 00:00:00",
+        "city": "Chennai",
+        "mean_rating": 3.0728813559322035,
+        "rating_count": 590,
+        "mean_likes": 247.22881355932202
       },
       {
-        "created_at": "2023-02-28 00:00:00+00:00",
-        "city": "Dhaka",
-        "mean_rating": 2.85143684732068,
-        "rating_count": 13119,
-        "mean_likes": 0.41359859745407423
+        "created_at": "2023-04-30 00:00:00",
+        "city": "Delhi",
+        "mean_rating": 3.07190635451505,
+        "rating_count": 598,
+        "mean_likes": 249.15886287625418
       },
       {
-        "created_at": "2023-02-28 00:00:00+00:00",
-        "city": "Savar",
-        "mean_rating": 2.8436363636363637,
-        "rating_count": 275,
-        "mean_likes": 0.36363636363636365
+        "created_at": "2023-04-30 00:00:00",
+        "city": "Pune",
+        "mean_rating": 3.0638977635782747,
+        "rating_count": 626,
+        "mean_likes": 238.84345047923324
       },
       {
-        "created_at": "2023-03-31 00:00:00+00:00",
-        "city": "Narayanganj",
-        "mean_rating": 2.861904761904762,
-        "rating_count": 420,
-        "mean_likes": 0.44761904761904764
+        "created_at": "2023-05-31 00:00:00",
+        "city": "Delhi",
+        "mean_rating": 3.0625,
+        "rating_count": 576,
+        "mean_likes": 258.00694444444446
       },
       {
-        "created_at": "2023-03-31 00:00:00+00:00",
-        "city": "Sylhet",
-        "mean_rating": 2.7614973262032088,
-        "rating_count": 935,
-        "mean_likes": 0.38074866310160427
+        "created_at": "2023-05-31 00:00:00",
+        "city": "Kolkata",
+        "mean_rating": 3.036977491961415,
+        "rating_count": 622,
+        "mean_likes": 254.51607717041801
       },
       {
-        "created_at": "2023-03-31 00:00:00+00:00",
-        "city": "Dhaka",
-        "mean_rating": 2.754831068445331,
-        "rating_count": 16042,
-        "mean_likes": 0.412230395212567
+        "created_at": "2023-05-31 00:00:00",
+        "city": "Chennai",
+        "mean_rating": 3.019908116385911,
+        "rating_count": 653,
+        "mean_likes": 253.50076569678407
       },
       {
-        "created_at": "2023-04-30 00:00:00+00:00",
-        "city": "Dhaka",
-        "mean_rating": 2.7710429447852762,
-        "rating_count": 16300,
-        "mean_likes": 0.36680981595092027
+        "created_at": "2023-06-30 00:00:00",
+        "city": "Chennai",
+        "mean_rating": 3.059294871794872,
+        "rating_count": 624,
+        "mean_likes": 252.55448717948718
       },
       {
-        "created_at": "2023-04-30 00:00:00+00:00",
-        "city": "Narayanganj",
-        "mean_rating": 2.7254464285714284,
-        "rating_count": 448,
-        "mean_likes": 0.3950892857142857
+        "created_at": "2023-06-30 00:00:00",
+        "city": "Kolkata",
+        "mean_rating": 3.0327022375215145,
+        "rating_count": 581,
+        "mean_likes": 258.03098106712565
       },
       {
-        "created_at": "2023-04-30 00:00:00+00:00",
-        "city": "Sylhet",
-        "mean_rating": 2.7227488151658767,
-        "rating_count": 844,
-        "mean_likes": 0.3933649289099526
+        "created_at": "2023-06-30 00:00:00",
+        "city": "Hyderabad",
+        "mean_rating": 2.993322203672788,
+        "rating_count": 599,
+        "mean_likes": 250.69782971619367
       },
       {
-        "created_at": "2023-05-31 00:00:00+00:00",
-        "city": "Dhaka",
-        "mean_rating": 2.8665613096685307,
-        "rating_count": 24678,
-        "mean_likes": 0.28705729799821705
+        "created_at": "2023-07-31 00:00:00",
+        "city": "Mumbai",
+        "mean_rating": 3.0226904376012964,
+        "rating_count": 617,
+        "mean_likes": 245.86547811993518
       },
       {
-        "created_at": "2023-05-31 00:00:00+00:00",
-        "city": "Savar",
-        "mean_rating": 2.741344195519348,
-        "rating_count": 491,
-        "mean_likes": 0.2505091649694501
+        "created_at": "2023-07-31 00:00:00",
+        "city": "Bangalore",
+        "mean_rating": 2.997037037037037,
+        "rating_count": 675,
+        "mean_likes": 255.35555555555555
       },
       {
-        "created_at": "2023-05-31 00:00:00+00:00",
-        "city": "Sylhet",
-        "mean_rating": 2.700401606425703,
-        "rating_count": 1245,
-        "mean_likes": 0.36305220883534134
+        "created_at": "2023-07-31 00:00:00",
+        "city": "Hyderabad",
+        "mean_rating": 2.9754901960784315,
+        "rating_count": 612,
+        "mean_likes": 255.76307189542484
       },
       {
-        "created_at": "2023-06-30 00:00:00+00:00",
-        "city": "Dhaka",
-        "mean_rating": 2.808340518930783,
-        "rating_count": 25514,
-        "mean_likes": 0.266128400094066
+        "created_at": "2023-08-31 00:00:00",
+        "city": "Bangalore",
+        "mean_rating": 3.0921875,
+        "rating_count": 640,
+        "mean_likes": 252.8453125
       },
       {
-        "created_at": "2023-06-30 00:00:00+00:00",
-        "city": "Narayanganj",
-        "mean_rating": 2.7968970380818052,
-        "rating_count": 709,
-        "mean_likes": 0.3131170662905501
+        "created_at": "2023-08-31 00:00:00",
+        "city": "Chennai",
+        "mean_rating": 3.0634920634920637,
+        "rating_count": 630,
+        "mean_likes": 260.5095238095238
       },
       {
-        "created_at": "2023-06-30 00:00:00+00:00",
-        "city": "Chittagong",
-        "mean_rating": 2.7716159809183063,
-        "rating_count": 3354,
-        "mean_likes": 0.2426952892069171
+        "created_at": "2023-08-31 00:00:00",
+        "city": "Hyderabad",
+        "mean_rating": 3.0469483568075115,
+        "rating_count": 639,
+        "mean_likes": 242.30985915492957
       },
       {
-        "created_at": "2023-07-31 00:00:00+00:00",
-        "city": "Narayanganj",
-        "mean_rating": 2.932178932178932,
-        "rating_count": 693,
-        "mean_likes": 0.23953823953823955
+        "created_at": "2023-09-30 00:00:00",
+        "city": "Hyderabad",
+        "mean_rating": 3.0925644916540214,
+        "rating_count": 659,
+        "mean_likes": 250.23065250379364
       },
       {
-        "created_at": "2023-07-31 00:00:00+00:00",
-        "city": "Chittagong",
-        "mean_rating": 2.819134641225477,
-        "rating_count": 3721,
-        "mean_likes": 0.24402042461703843
+        "created_at": "2023-09-30 00:00:00",
+        "city": "Mumbai",
+        "mean_rating": 3.0738993710691824,
+        "rating_count": 636,
+        "mean_likes": 256.2672955974843
       },
       {
-        "created_at": "2023-07-31 00:00:00+00:00",
-        "city": "Gazipur",
-        "mean_rating": 2.7906976744186047,
+        "created_at": "2023-09-30 00:00:00",
+        "city": "Chennai",
+        "mean_rating": 3.040472175379427,
+        "rating_count": 593,
+        "mean_likes": 255.45025295109613
+      },
+      {
+        "created_at": "2023-10-31 00:00:00",
+        "city": "Mumbai",
+        "mean_rating": 3.0553064275037367,
+        "rating_count": 669,
+        "mean_likes": 249.77130044843048
+      },
+      {
+        "created_at": "2023-10-31 00:00:00",
+        "city": "Pune",
+        "mean_rating": 3.04320987654321,
+        "rating_count": 648,
+        "mean_likes": 260.29938271604937
+      },
+      {
+        "created_at": "2023-10-31 00:00:00",
+        "city": "Chennai",
+        "mean_rating": 3.0217076700434156,
+        "rating_count": 691,
+        "mean_likes": 242.88567293777135
+      },
+      {
+        "created_at": "2023-11-30 00:00:00",
+        "city": "Delhi",
+        "mean_rating": 3.081123244929797,
+        "rating_count": 641,
+        "mean_likes": 245.97191887675507
+      },
+      {
+        "created_at": "2023-11-30 00:00:00",
+        "city": "Chennai",
+        "mean_rating": 3.0378289473684212,
+        "rating_count": 608,
+        "mean_likes": 258.64638157894734
+      },
+      {
+        "created_at": "2023-11-30 00:00:00",
+        "city": "Pune",
+        "mean_rating": 3.019047619047619,
+        "rating_count": 630,
+        "mean_likes": 253.4904761904762
+      },
+      {
+        "created_at": "2023-12-31 00:00:00",
+        "city": "Bangalore",
+        "mean_rating": 3.1725352112676055,
+        "rating_count": 284,
+        "mean_likes": 255.20070422535213
+      },
+      {
+        "created_at": "2023-12-31 00:00:00",
+        "city": "Chennai",
+        "mean_rating": 3.116279069767442,
         "rating_count": 301,
-        "mean_likes": 0.132890365448505
+        "mean_likes": 239.82724252491695
       },
       {
-        "created_at": "2023-08-31 00:00:00+00:00",
-        "city": "Chittagong",
-        "mean_rating": 2.8964418481147107,
-        "rating_count": 3766,
-        "mean_likes": 0.2299522039298991
-      },
-      {
-        "created_at": "2023-08-31 00:00:00+00:00",
-        "city": "Sylhet",
-        "mean_rating": 2.8798850574712644,
-        "rating_count": 1740,
-        "mean_likes": 0.2706896551724138
-      },
-      {
-        "created_at": "2023-08-31 00:00:00+00:00",
-        "city": "Narayanganj",
-        "mean_rating": 2.8719512195121952,
-        "rating_count": 820,
-        "mean_likes": 0.2597560975609756
-      },
-      {
-        "created_at": "2023-09-30 00:00:00+00:00",
-        "city": "Sylhet",
-        "mean_rating": 2.8758300132802126,
-        "rating_count": 1506,
-        "mean_likes": 0.21381142098273573
-      },
-      {
-        "created_at": "2023-09-30 00:00:00+00:00",
-        "city": "Chittagong",
-        "mean_rating": 2.864830072090628,
-        "rating_count": 3884,
-        "mean_likes": 0.17662203913491245
-      },
-      {
-        "created_at": "2023-09-30 00:00:00+00:00",
-        "city": "Dhaka",
-        "mean_rating": 2.8421267893660533,
-        "rating_count": 29340,
-        "mean_likes": 0.20760054533060668
-      },
-      {
-        "created_at": "2023-10-31 00:00:00+00:00",
-        "city": "Chittagong",
-        "mean_rating": 2.9690597051003143,
-        "rating_count": 4137,
-        "mean_likes": 0.10418177423253565
-      },
-      {
-        "created_at": "2023-10-31 00:00:00+00:00",
-        "city": "Sylhet",
-        "mean_rating": 2.9441680486456607,
-        "rating_count": 1809,
-        "mean_likes": 0.12824765063571034
-      },
-      {
-        "created_at": "2023-10-31 00:00:00+00:00",
-        "city": "Gazipur",
-        "mean_rating": 2.8846153846153846,
-        "rating_count": 364,
-        "mean_likes": 0.2554945054945055
-      },
-      {
-        "created_at": "2023-11-30 00:00:00+00:00",
-        "city": "Savar",
-        "mean_rating": 3.0694444444444446,
-        "rating_count": 144,
-        "mean_likes": 0.041666666666666664
-      },
-      {
-        "created_at": "2023-11-30 00:00:00+00:00",
-        "city": "Narayanganj",
-        "mean_rating": 3.0090909090909093,
-        "rating_count": 220,
-        "mean_likes": 0.04090909090909091
-      },
-      {
-        "created_at": "2023-11-30 00:00:00+00:00",
-        "city": "Sylhet",
-        "mean_rating": 3.0051903114186853,
-        "rating_count": 578,
-        "mean_likes": 0.09515570934256055
+        "created_at": "2023-12-31 00:00:00",
+        "city": "Hyderabad",
+        "mean_rating": 2.9961977186311786,
+        "rating_count": 263,
+        "mean_likes": 230.425855513308
       }
     ],
     "cuisine_overall_top": [
       {
-        "primary_cuisine": "Chinese",
-        "mean_rating": 3.3741970021413277,
-        "rating_count": 1868
+        "primary_cuisine": "north indian",
+        "mean_rating": 3.023416560868952,
+        "rating_count": 7089
       },
       {
-        "primary_cuisine": "Asian",
-        "mean_rating": 3.25,
-        "rating_count": 36
+        "primary_cuisine": "south indian",
+        "mean_rating": 3.0103746397694526,
+        "rating_count": 6940
       },
       {
-        "primary_cuisine": "Dessert",
-        "mean_rating": 3.2491190979563074,
-        "rating_count": 5676
+        "primary_cuisine": "pizza",
+        "mean_rating": 2.9958825144111993,
+        "rating_count": 7286
       },
       {
-        "primary_cuisine": "Fried Chicken",
-        "mean_rating": 3.0808823529411766,
-        "rating_count": 136
+        "primary_cuisine": "curry",
+        "mean_rating": 2.988781377085963,
+        "rating_count": 7131
       },
       {
-        "primary_cuisine": "Chotpoti & Fuchka",
-        "mean_rating": 3.0777460770328102,
-        "rating_count": 1402
+        "primary_cuisine": "biryani",
+        "mean_rating": 2.9857826576576576,
+        "rating_count": 7104
       }
     ]
   }

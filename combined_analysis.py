@@ -6,7 +6,7 @@ from scipy.stats import f_oneway, ttest_ind, pearsonr
 import warnings
 warnings.filterwarnings('ignore')
 
-INPUT_CSV = "final_reviews.csv"
+INPUT_CSV = "standardized_test.csv"
 OUTPUT_DIR = "./"
 
 # ============ HELPER FUNCTIONS ============

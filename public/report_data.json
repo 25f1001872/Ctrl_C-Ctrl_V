@@ -1,0 +1,198 @@
+{
+  "stage_1_descriptive_statistics": {
+    "key_insights": {
+      "Total Reviews": 15847,
+      "Number of Cities": 12,
+      "Number of Restaurants": 342,
+      "Number of Cuisines": 28,
+      "Number of Reviewers": 8934,
+      "Date Range": "Jan 2023 - Dec 2024",
+      "Average Rating": 4.12,
+      "Median Rating": 4.5,
+      "Std Dev Rating": 0.89,
+      "Avg Likes per Review": 3.7,
+      "Reviews with Likes": "67% (10,617)",
+      "CV Rating (%)": 21.6,
+      "CV Likes (%)": 145.2
+    },
+    "overall_stats": {
+      "rating_overall": {
+        "count": 15847,
+        "mean": 4.12,
+        "std": 0.89,
+        "min": 1.0,
+        "25%": 3.5,
+        "50%": 4.5,
+        "75%": 5.0,
+        "max": 5.0
+      },
+      "like_count": {
+        "count": 15847,
+        "mean": 3.7,
+        "std": 5.37,
+        "min": 0,
+        "25%": 0,
+        "50%": 2,
+        "75%": 5,
+        "max": 89
+      }
+    },
+    "by_city": {
+      "New York": { "count": 4521, "mean": 4.23, "median": 4.5, "std": 0.82, "cv_%": 19.4 },
+      "Los Angeles": { "count": 3892, "mean": 4.08, "median": 4.0, "std": 0.91, "cv_%": 22.3 },
+      "Chicago": { "count": 2134, "mean": 4.15, "median": 4.5, "std": 0.87, "cv_%": 21.0 },
+      "Houston": { "count": 1567, "mean": 3.98, "median": 4.0, "std": 0.95, "cv_%": 23.9 },
+      "Phoenix": { "count": 1234, "mean": 4.02, "median": 4.0, "std": 0.88, "cv_%": 21.9 },
+      "Philadelphia": { "count": 987, "mean": 4.11, "median": 4.5, "std": 0.84, "cv_%": 20.4 },
+      "San Antonio": { "count": 654, "mean": 4.05, "median": 4.0, "std": 0.92, "cv_%": 22.7 },
+      "San Diego": { "count": 432, "mean": 4.18, "median": 4.5, "std": 0.79, "cv_%": 18.9 },
+      "Dallas": { "count": 321, "mean": 4.0, "median": 4.0, "std": 0.94, "cv_%": 23.5 },
+      "San Jose": { "count": 105, "mean": 4.25, "median": 4.5, "std": 0.76, "cv_%": 17.9 }
+    },
+    "by_cuisine": {
+      "Italian": { "count": 2341, "mean": 4.32, "median": 4.5, "std": 0.78, "cv_%": 18.1 },
+      "Mexican": { "count": 2156, "mean": 4.15, "median": 4.5, "std": 0.85, "cv_%": 20.5 },
+      "Chinese": { "count": 1987, "mean": 4.08, "median": 4.0, "std": 0.92, "cv_%": 22.5 },
+      "Japanese": { "count": 1654, "mean": 4.28, "median": 4.5, "std": 0.81, "cv_%": 18.9 },
+      "Indian": { "count": 1432, "mean": 4.21, "median": 4.5, "std": 0.83, "cv_%": 19.7 },
+      "American": { "count": 1876, "mean": 3.95, "median": 4.0, "std": 0.98, "cv_%": 24.8 },
+      "Thai": { "count": 987, "mean": 4.18, "median": 4.5, "std": 0.84, "cv_%": 20.1 },
+      "French": { "count": 654, "mean": 4.35, "median": 4.5, "std": 0.72, "cv_%": 16.6 },
+      "Mediterranean": { "count": 543, "mean": 4.25, "median": 4.5, "std": 0.79, "cv_%": 18.6 },
+      "Korean": { "count": 432, "mean": 4.22, "median": 4.5, "std": 0.82, "cv_%": 19.4 }
+    },
+    "by_restaurant_top20": {
+      "The Italian Place": { "count": 234, "mean": 4.65, "median": 5.0, "std": 0.52, "cv_%": 11.2 },
+      "Sakura Sushi": { "count": 198, "mean": 4.58, "median": 5.0, "std": 0.58, "cv_%": 12.7 },
+      "Taco Heaven": { "count": 187, "mean": 4.42, "median": 4.5, "std": 0.68, "cv_%": 15.4 },
+      "Dragon Palace": { "count": 176, "mean": 4.35, "median": 4.5, "std": 0.72, "cv_%": 16.6 },
+      "Curry House": { "count": 165, "mean": 4.48, "median": 4.5, "std": 0.62, "cv_%": 13.8 },
+      "Burger Joint": { "count": 154, "mean": 4.12, "median": 4.0, "std": 0.85, "cv_%": 20.6 },
+      "Thai Orchid": { "count": 143, "mean": 4.38, "median": 4.5, "std": 0.69, "cv_%": 15.8 },
+      "Le Petit Bistro": { "count": 132, "mean": 4.52, "median": 5.0, "std": 0.58, "cv_%": 12.8 },
+      "Seoul Kitchen": { "count": 121, "mean": 4.45, "median": 4.5, "std": 0.64, "cv_%": 14.4 },
+      "Olive Garden": { "count": 118, "mean": 4.02, "median": 4.0, "std": 0.92, "cv_%": 22.9 },
+      "Panda Express": { "count": 112, "mean": 3.85, "median": 4.0, "std": 0.98, "cv_%": 25.5 },
+      "Chipotle": { "count": 108, "mean": 4.08, "median": 4.0, "std": 0.88, "cv_%": 21.6 },
+      "Five Guys": { "count": 102, "mean": 4.18, "median": 4.0, "std": 0.82, "cv_%": 19.6 },
+      "Cheesecake Factory": { "count": 98, "mean": 4.25, "median": 4.5, "std": 0.78, "cv_%": 18.4 },
+      "P.F. Changs": { "count": 94, "mean": 4.15, "median": 4.0, "std": 0.84, "cv_%": 20.2 },
+      "Outback Steakhouse": { "count": 89, "mean": 4.05, "median": 4.0, "std": 0.89, "cv_%": 22.0 },
+      "Red Lobster": { "count": 85, "mean": 4.0, "median": 4.0, "std": 0.92, "cv_%": 23.0 },
+      "Applebees": { "count": 82, "mean": 3.78, "median": 4.0, "std": 1.02, "cv_%": 27.0 },
+      "TGI Fridays": { "count": 78, "mean": 3.85, "median": 4.0, "std": 0.98, "cv_%": 25.5 },
+      "Chilis": { "count": 75, "mean": 3.92, "median": 4.0, "std": 0.95, "cv_%": 24.2 }
+    }
+  },
+  "stage_2_statistical_tests": {
+    "anova_by_city": {
+      "F_statistic": 12.4532,
+      "p_value": 0.0001,
+      "eta_squared": 0.0234,
+      "effect_size": "Small",
+      "significant": "Yes"
+    },
+    "anova_by_cuisine": {
+      "F_statistic": 18.7891,
+      "p_value": 0.00001,
+      "eta_squared": 0.0456,
+      "effect_size": "Small to Medium",
+      "significant": "Yes"
+    },
+    "ttest_likes_comparison": {
+      "mean_with_likes": 4.28,
+      "mean_without_likes": 3.85,
+      "mean_difference": 0.43,
+      "t_statistic": 15.234,
+      "p_value": 0.00001,
+      "cohens_d": 0.485,
+      "significant": "Yes",
+      "n_with_likes": 10617,
+      "n_without_likes": 5230
+    },
+    "correlation_rating_likes": {
+      "pearson_r": 0.187,
+      "p_value": 0.00001,
+      "strength": "Weak Positive",
+      "significant": "Yes"
+    }
+  },
+  "stage_3_outlier_detection": {
+    "rating_outliers_iqr": {
+      "Q1": 3.5,
+      "Q3": 5.0,
+      "IQR": 1.5,
+      "lower_bound": 1.25,
+      "upper_bound": 7.25,
+      "outlier_count": 0,
+      "outlier_percentage": 0.0
+    },
+    "likes_outliers_iqr": {
+      "Q1": 0,
+      "Q3": 5,
+      "IQR": 5,
+      "lower_bound": -7.5,
+      "upper_bound": 12.5,
+      "outlier_count": 1234,
+      "outlier_percentage": 7.79
+    },
+    "rating_outliers_zscore": {
+      "mean": 4.12,
+      "std_dev": 0.89,
+      "threshold": 3,
+      "outlier_count": 47,
+      "outlier_percentage": 0.3
+    },
+    "likes_outliers_zscore": {
+      "mean": 3.7,
+      "std_dev": 5.37,
+      "threshold": 3,
+      "outlier_count": 312,
+      "outlier_percentage": 1.97
+    },
+    "restaurant_rating_outliers_iqr": {
+      "Q1": 3.95,
+      "Q3": 4.45,
+      "IQR": 0.5,
+      "lower_bound": 3.2,
+      "upper_bound": 5.2,
+      "outlier_count": 8
+    },
+    "anomaly_count": 156,
+    "anomaly_percentage": 0.98
+  },
+  "stage_4_time_series": {
+    "cuisine_overall_top": [
+      { "primary_cuisine": "French", "rating_count": 654, "mean_rating": 4.35 },
+      { "primary_cuisine": "Italian", "rating_count": 2341, "mean_rating": 4.32 },
+      { "primary_cuisine": "Japanese", "rating_count": 1654, "mean_rating": 4.28 },
+      { "primary_cuisine": "Mediterranean", "rating_count": 543, "mean_rating": 4.25 },
+      { "primary_cuisine": "Korean", "rating_count": 432, "mean_rating": 4.22 }
+    ],
+    "ts_daily_overall_top": [
+      { "2024-12-25": { "rating_count": 234, "mean_rating": 4.78 } },
+      { "2024-02-14": { "rating_count": 312, "mean_rating": 4.72 } },
+      { "2024-07-04": { "rating_count": 287, "mean_rating": 4.68 } },
+      { "2024-11-28": { "rating_count": 198, "mean_rating": 4.65 } },
+      { "2024-12-31": { "rating_count": 176, "mean_rating": 4.62 } }
+    ],
+    "ts_monthly_overall_top": [
+      { "2024-12": { "rating_count": 1543, "mean_rating": 4.45 } },
+      { "2024-02": { "rating_count": 1234, "mean_rating": 4.38 } },
+      { "2024-07": { "rating_count": 1456, "mean_rating": 4.35 } },
+      { "2024-11": { "rating_count": 1321, "mean_rating": 4.32 } },
+      { "2024-06": { "rating_count": 1398, "mean_rating": 4.28 } }
+    ],
+    "ts_monthly_by_city_top": [
+      { "created_at": "2024-12-01", "city": "New York", "mean_rating": 4.52, "rating_count": 432, "mean_likes": 5.2 },
+      { "created_at": "2024-12-01", "city": "Los Angeles", "mean_rating": 4.38, "rating_count": 387, "mean_likes": 4.8 },
+      { "created_at": "2024-12-01", "city": "Chicago", "mean_rating": 4.35, "rating_count": 234, "mean_likes": 4.5 },
+      { "created_at": "2024-11-01", "city": "New York", "mean_rating": 4.48, "rating_count": 398, "mean_likes": 4.9 },
+      { "created_at": "2024-11-01", "city": "Los Angeles", "mean_rating": 4.32, "rating_count": 356, "mean_likes": 4.6 },
+      { "created_at": "2024-11-01", "city": "Houston", "mean_rating": 4.28, "rating_count": 187, "mean_likes": 4.2 },
+      { "created_at": "2024-10-01", "city": "New York", "mean_rating": 4.42, "rating_count": 412, "mean_likes": 4.7 },
+      { "created_at": "2024-10-01", "city": "Chicago", "mean_rating": 4.35, "rating_count": 245, "mean_likes": 4.4 },
+      { "created_at": "2024-10-01", "city": "Los Angeles", "mean_rating": 4.28, "rating_count": 378, "mean_likes": 4.5 }
+    ]
+  }
+}
