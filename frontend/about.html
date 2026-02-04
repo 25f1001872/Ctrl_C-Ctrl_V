@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DineSight | About Us</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0ea5e9", // Vibrant Blue
+                        "background-light": "#f0f4f5",
+                        "background-dark": "#0f1619", // Deep dark background from screenshot
+                        "card-dark": "#121d21",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .step-number {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            color: transparent;
+        }
+
+        .dark .step-number {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+    <nav
+        class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+        <div class="w-full px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div
+                    class="flex h-8 w-8 items-center justify-center rounded bg-gradient-to-br from-primary to-blue-600 text-white shadow-neon">
+                </div>
+                <span class="text-xl font-bold tracking-tight dark:text-white">DineSight</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-l font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="text-l font-medium hover:text-primary transition-colors" href="upload.html">Get Started</a>
+            </div>
+        </div>
+    </nav>
+    <header class="py-24 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 dark:text-white tracking-tight">Our Story</h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                Founded at the intersection of culinary passion and data science, DineSight was born from a simple
+                observation: restaurants are overflowing with data, but starving for insights. We set out to empower
+                restaurateurs with the tools to turn every review, transaction, and interaction into a roadmap for
+                growth.
+            </p>
+        </div>
+    </header>
+    <section class="py-12 px-6 bg-slate-50 dark:bg-transparent border-2 border-slate-200 dark:border-slate-800 rounded-lg mx-40 mb-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold mb-4 dark:text-white">The Process</h2>
+                <p class="text-slate-500 text-lg dark:text-slate-400">The principles that guide our mission and every line of
+                    code we write.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12 relative">
+                <div class="relative group text-center px-4">
+                    <div
+                        class="absolute -top-12 left-1/2 -translate-x-1/2 text-8xl font-black step-number opacity-20 select-none">
+                        1</div>
+                    <div
+                        class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-icons-round text-primary text-3xl">shield</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 dark:text-white">Upload Data</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Drag and drop your CSV or JSON files containing raw restaurant reviews directly into our secure portal.
+                    </p>
+                </div>
+                <div class="relative group text-center px-4">
+                    <div
+                        class="absolute -top-12 left-1/2 -translate-x-1/2 text-8xl font-black step-number opacity-20 select-none">
+                        2</div>
+                    <div
+                        class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-icons-round text-primary text-3xl">lightbulb</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 dark:text-white">AI Processing</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Our NLP engine cleans, tokenizes, and analyzes sentiment, identifying key topics and statistical anomalies.
+                    </p>
+                </div>
+                <div class="relative group text-center px-4">
+                    <div
+                        class="absolute -top-12 left-1/2 -translate-x-1/2 text-8xl font-black step-number opacity-20 select-none">
+                        3</div>
+                    <div
+                        class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-icons-round text-primary text-3xl">handshake</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 dark:text-white">Detailed Report</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Explore your data through an interactive dashboard. Filter by date, sentiment, or topic and share with your team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-6 px-6 border-t border-slate-200 dark:border-slate-800">
+        <div class="w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <div class="bg-primary p-1.5 rounded-md">
+                    <span class="material-icons-round text-white text-base">insights</span>
+                </div>
+                <span class="font-bold tracking-tight dark:text-white">DineSight</span>
+            </div>
+            <p class="text-sm text-slate-500">© 2026 DineSight Analytics Inc. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a class="text-slate-500 hover:text-primary transition-colors" href="#">Twitter</a>
+                <a class="text-slate-500 hover:text-primary transition-colors" href="#">LinkedIn</a>
+                <a class="text-slate-500 hover:text-primary transition-colors" href="#">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
