@@ -1,4 +1,5 @@
 import os
+import re
 import json
 from typing import Dict, Any
 from dotenv import load_dotenv
@@ -14,17 +15,10 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 app = Flask(__name__)
 
-
-# ======================================================
-# CORE FUNCTION
-# ======================================================
 def generate_restaurant_summary(INPUT_CSV):
 
-    # -------------------
-    # RUN ANALYSIS
-    # -------------------
     analysis_results = run_all(INPUT_CSV)
-
+    #we are using gemini-3 model
     llm = ChatGoogleGenerativeAI(
         model="gemini-3-flash-preview",
         temperature=0.7,
@@ -51,10 +45,6 @@ def generate_restaurant_summary(INPUT_CSV):
         "multilayer_verbatim_analysis": analysis_results["results"]["multilayer_verbatim_analysis"],
         "quote_relevance_scoring": analysis_results["results"]["quote_relevance_scoring"],
     }
-
-    # -------------------
-    # PROMPT
-    # -------------------
     system_prompt = PromptTemplate(
         template="""You are a domain-specialized language model acting as a Restaurant Insights Analyst.
 
@@ -179,17 +169,9 @@ for restaurant stakeholders based on the provided analysis results.
 
     prompt = system_prompt.format(**llm_input)
 
-    # -------------------
-    # LLM CALL (🔥 FIX)
-    import re
-
-    # -------------------
-    # LLM CALL (BULLETPROOF)
-    # -------------------
     response = llm.invoke(prompt)
     raw = response.content
 
-    # 1️⃣ Normalize Gemini output
     if isinstance(raw, list):
         raw = "".join(
             part.get("text", "") if isinstance(part, dict) else str(part)
@@ -198,32 +180,23 @@ for restaurant stakeholders based on the provided analysis results.
 
     raw = raw.strip()
 
-    # 2️⃣ Extract JSON block ONLY
     match = re.search(r"\{[\s\S]*\}", raw)
     if not match:
         raise ValueError(f"No JSON found in LLM output:\n{raw}")
 
     json_text = match.group(0)
 
-    # 3️⃣ Parse safely
     try:
         parsed = json.loads(json_text)
     except json.JSONDecodeError:
-        # 🔥 Auto-repair: remove trailing commas
         json_text = re.sub(r",\s*([\]}])", r"\1", json_text)
         parsed = json.loads(json_text)
 
-    # 4️⃣ Final validation
     if "summary_points" not in parsed:
         raise ValueError("JSON parsed but summary_points missing")
 
     return parsed["summary_points"], analysis_results
 
-
-
-# ======================================================
-# ROUTES
-# ======================================================
 @app.route("/")
 def home():
     return send_from_directory("./frontend", "index.html")
