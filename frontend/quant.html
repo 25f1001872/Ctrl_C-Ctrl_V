@@ -87,6 +87,17 @@
           </div>
           <span class="text-xl font-bold tracking-tight">DineSight</span>
         </div>
+        <div class="flex items-center gap-8">
+            <a class="text-l font-medium text-slate-600 hover:text-purple-400 dark:text-text-muted dark:hover:text-white transition-colors"
+                href="/qual">Click Here For Qualitative Report</a>
+            <a class="text-l font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors"
+                href="/upload">Go Back</a>
+            <a class="text-l font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors"
+                href="/about">About Us</a>
+            <button class="md:hidden p-2 text-slate-600 dark:text-text-muted">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
         <div class="flex items-center gap-4">
           <button onclick="window.print()" class="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-bold text-background-dark transition-all hover:bg-primary-hover hover:shadow-neon">
             <span class="material-symbols-outlined text-[18px] mr-2">download</span>
@@ -696,16 +707,14 @@
     }
 
     // MAIN LOAD FUNCTION
-    fetch('../report_data.json')
-      .then(res => {
-        return res.json();
-      })
-      .then(data => injectReportData(data))
-      .catch(err => {
-        console.error('Failed to load report_data.json', err);
-        const loader = document.getElementById('loadingMessage');
-        loader.innerHTML = `<div class="text-danger p-6 border border-danger bg-surface-dark rounded-xl max-w-lg mx-auto"><h3 class="text-xl font-bold mb-2">Error Loading Data</h3><p>Could not load <code>report_data.json</code>.</p><br><p class="text-sm">1. Ensure the JSON file is in the same folder.<br>2. <strong>IMPORTANT:</strong> You must use a Local Server (VS Code "Live Server" extension, or <code>python -m http.server</code>).<br>Browsers block fetching local files (file://) for security.</p></div>`;
-      });
+    const storedData = JSON.parse(localStorage.getItem('analysis_result'));
+    if (storedData) {
+      injectReportData(storedData);
+    } else {
+      console.error('Failed to load report_data.json', err);
+      const loader = document.getElementById('loadingMessage');
+      loader.innerHTML = `<div class="text-danger p-6 border border-danger bg-surface-dark rounded-xl max-w-lg mx-auto"><h3 class="text-xl font-bold mb-2">Error Loading Data</h3><p>Could not load <code>report_data.json</code>.</p><br><p class="text-sm">1. Ensure the JSON file is in the same folder.<br>2. <strong>IMPORTANT:</strong> You must use a Local Server (VS Code "Live Server" extension, or <code>python -m http.server</code>).<br>Browsers block fetching local files (file://) for security.</p></div>`;
+    };
   </script>
 </body>
 </html>

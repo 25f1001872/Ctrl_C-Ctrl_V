@@ -83,9 +83,9 @@
 
         <div class="flex items-center gap-4">
           <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors"
-            href="index.html">Home</a>
+            href="/">Home</a>
           <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-muted dark:hover:text-white transition-colors"
-            href="about.html">About Us</a>
+            href="/about">About Us</a>
         </div>
       </div>
     </div>
@@ -359,7 +359,7 @@
     formData.append("csv_file", fileInput.files[0]);
 
     runBtn.disabled = true;
-    runBtn.textContent = "Analyzing...";
+    runBtn.textContent = "Analyzing. Please wait...";
 
     try {
       const res = await fetch("/analyze", {
@@ -369,7 +369,7 @@
 
       const data = await res.json();
       localStorage.setItem("analysis_result", JSON.stringify(data));
-      window.location.href = "{{ url_for('report') }}";
+      window.location.href = "/quant";
 
     } catch (err) {
       output.textContent = "Error running analysis";

@@ -6,7 +6,7 @@ from flask import Flask, send_from_directory, request, jsonify
 from langchain_core.prompts import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from scripts.runnner import run_all
-
+import re
 load_dotenv()
 
 UPLOAD_DIR = "uploads"
@@ -14,22 +14,15 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 app = Flask(__name__)
 
-
-# ======================================================
-# CORE FUNCTION
-# ======================================================
 def generate_restaurant_summary(INPUT_CSV):
 
-    # -------------------
-    # RUN ANALYSIS
-    # -------------------
     analysis_results = run_all(INPUT_CSV)
 
     llm = ChatGoogleGenerativeAI(
         model="gemini-3-flash-preview",
         temperature=0.7,
     )
-
+    print("Generating restaurant summary with Gemini 3 Flash Preview...")
     llm_input = {
         "quantitative_summary": {
             "dataset_scope": analysis_results["results"]["quantitative_analysis"]
@@ -51,10 +44,6 @@ def generate_restaurant_summary(INPUT_CSV):
         "multilayer_verbatim_analysis": analysis_results["results"]["multilayer_verbatim_analysis"],
         "quote_relevance_scoring": analysis_results["results"]["quote_relevance_scoring"],
     }
-
-    # -------------------
-    # PROMPT
-    # -------------------
     system_prompt = PromptTemplate(
         template="""You are a domain-specialized language model acting as a Restaurant Insights Analyst.
 
@@ -178,18 +167,8 @@ for restaurant stakeholders based on the provided analysis results.
     )
 
     prompt = system_prompt.format(**llm_input)
-
-    # -------------------
-    # LLM CALL (🔥 FIX)
-    import re
-
-    # -------------------
-    # LLM CALL (BULLETPROOF)
-    # -------------------
     response = llm.invoke(prompt)
     raw = response.content
-
-    # 1️⃣ Normalize Gemini output
     if isinstance(raw, list):
         raw = "".join(
             part.get("text", "") if isinstance(part, dict) else str(part)
@@ -198,7 +177,6 @@ for restaurant stakeholders based on the provided analysis results.
 
     raw = raw.strip()
 
-    # 2️⃣ Extract JSON block ONLY
     match = re.search(r"\{[\s\S]*\}", raw)
     if not match:
         raise ValueError(f"No JSON found in LLM output:\n{raw}")
@@ -216,14 +194,8 @@ for restaurant stakeholders based on the provided analysis results.
     # 4️⃣ Final validation
     if "summary_points" not in parsed:
         raise ValueError("JSON parsed but summary_points missing")
-
+    print("Summary Generation Successful! Returning summary points.")
     return parsed["summary_points"], analysis_results
-
-
-
-# ======================================================
-# ROUTES
-# ======================================================
 @app.route("/")
 def home():
     return send_from_directory("./frontend", "index.html")
@@ -233,9 +205,16 @@ def home():
 def upload():
     return send_from_directory("./frontend", "upload.html")
 
-@app.route("/report")
-def report():
-    return send_from_directory("./frontend", "quantitative_report_template.html")
+@app.route("/about")
+def about():
+    return send_from_directory("./frontend", "about.html")
+
+@app.route("/quant")
+def quant():
+    return send_from_directory("./frontend", "quant.html")
+@app.route("/qual")
+def qual():
+    return send_from_directory("./frontend", "qual.html")
 @app.route("/analyze", methods=["POST"])
 def analyze():
 

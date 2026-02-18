@@ -23,30 +23,16 @@ def generate_top_relevant_unique_quotes(
             "bad", "very bad", "not good", "poor",
             "quality bad", "taste bad", "food bad"
         }
-
-    # =====================================================
-    # LOAD DATA
-    # =====================================================
     df = pd.read_csv(themes_csv)
 
     with open(multitier_json, "r", encoding="utf-8") as f:
         analysis = json.load(f)
-
-    # Normalize text
     for col in ["phrase", "subtheme", "theme"]:
         df[col] = df[col].astype(str).str.lower().str.strip()
-
-    # =====================================================
-    # STEP 1: GLOBAL IMPORTANCE WEIGHTS
-    # =====================================================
-
-    # Tier-1: theme importance
     tier1_weights = {
         x["domain"].lower(): x["percentage"] / 100
         for x in analysis["tier_1"]["issue_distribution"]
     }
-
-    # Tier-2: subtheme importance
     tier2_weights = {
         x["concept"].lower(): x["review_count"]
         for x in analysis["tier_2"]["quality_dimension_distribution"]
@@ -55,16 +41,11 @@ def generate_top_relevant_unique_quotes(
     tier2_max = max(tier2_weights.values())
     tier2_weights = {k: v / tier2_max for k, v in tier2_weights.items()}
 
-    # Tier-3: phrase importance
     phrase_weight = Counter()
     for rc in analysis["tier_3"]["top_root_causes"]:
         phrase_weight[rc["phrase"].lower()] += rc["count"]
 
     phrase_weight = {k: math.log1p(v) for k, v in phrase_weight.items()}
-
-    # =====================================================
-    # STEP 2: SCORE COMPONENTS
-    # =====================================================
 
     df["severity"] = df["rating"].apply(lambda r: max(0.5, 3 - r))
     df["theme_weight"] = df["theme"].map(tier1_weights).fillna(0.1)
@@ -74,10 +55,6 @@ def generate_top_relevant_unique_quotes(
     df["specificity"] = df["phrase"].apply(
         lambda p: 0.3 if p in vague_phrases else 1.0
     )
-
-    # =====================================================
-    # STEP 3: FINAL RELEVANCE SCORE
-    # =====================================================
     df["relevance_score"] = (
         df["severity"]
         * df["theme_weight"]
@@ -86,16 +63,11 @@ def generate_top_relevant_unique_quotes(
         * df["specificity"]
     )
 
-    # =====================================================
-    # STEP 4: CREATE SIGNAL KEY
-    # =====================================================
+
     df["signal_key"] = list(
         zip(df["theme"], df["subtheme"], df["phrase"])
     )
 
-    # =====================================================
-    # STEP 5: ONE REPRESENTATIVE QUOTE PER SIGNAL
-    # =====================================================
     df_rep = (
         df.sort_values(
             ["relevance_score", "rating", "phrase"],
@@ -104,10 +76,6 @@ def generate_top_relevant_unique_quotes(
         .groupby("signal_key", as_index=False)
         .first()
     )
-
-    # =====================================================
-    # STEP 6: RANK & SELECT SIGNALS
-    # =====================================================
     df_rep = df_rep.sort_values("relevance_score", ascending=False)
 
     total_signals = len(df_rep)
@@ -115,10 +83,6 @@ def generate_top_relevant_unique_quotes(
     df_top = (
         df_rep.sort_values("relevance_score", ascending=False).head(5)
     )
-
-    # =====================================================
-    # STEP 7: OUTPUT
-    # =====================================================
     output_columns = [
         "review_id",
         "theme",
