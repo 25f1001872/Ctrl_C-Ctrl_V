@@ -1,4 +1,5 @@
 import os
+import re
 import json
 from typing import Dict, Any
 from dotenv import load_dotenv
@@ -17,7 +18,7 @@ app = Flask(__name__)
 def generate_restaurant_summary(INPUT_CSV):
 
     analysis_results = run_all(INPUT_CSV)
-
+    #we are using gemini-3 model
     llm = ChatGoogleGenerativeAI(
         model="gemini-3-flash-preview",
         temperature=0.7,
@@ -183,15 +184,12 @@ for restaurant stakeholders based on the provided analysis results.
 
     json_text = match.group(0)
 
-    # 3️⃣ Parse safely
     try:
         parsed = json.loads(json_text)
     except json.JSONDecodeError:
-        # 🔥 Auto-repair: remove trailing commas
         json_text = re.sub(r",\s*([\]}])", r"\1", json_text)
         parsed = json.loads(json_text)
 
-    # 4️⃣ Final validation
     if "summary_points" not in parsed:
         raise ValueError("JSON parsed but summary_points missing")
     print("Summary Generation Successful! Returning summary points.")

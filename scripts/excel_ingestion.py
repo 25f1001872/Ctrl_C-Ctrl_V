@@ -2,7 +2,6 @@ import pandas as pd
 import os
 import sys
 from pathlib import Path
-# STEP 1: INPUT INGESTION
 
 def read_input_file(file_path):
     if not os.path.exists(file_path):
@@ -20,8 +19,6 @@ def read_input_file(file_path):
         raise ValueError("Unsupported file format. Use CSV or Excel.")
 
     return df
-
-# STEP 2: HEADER DETECTION
 
 def detect_header_row(df, scan_rows=10):
     best_index, best_score = 0, 0
@@ -56,8 +53,6 @@ def normalize_column_names(df):
         .str.strip("_")
     )
     return df
-
-# STEP 3: SEMANTIC MAPPING
 
 STANDARD_COLUMN_SYNONYMS = {
         "created_at": [
@@ -130,10 +125,8 @@ STANDARD_COLUMN_SYNONYMS = {
         "canteen",
         "brand", "brand_name",
         "business", "business_name",
-        "name"   # common human mistake
+        "name"
     ],
-
-    # CITY / LOCATION
     "city": [
         "city", "cityname",
         "town",
@@ -141,7 +134,7 @@ STANDARD_COLUMN_SYNONYMS = {
         "place", "place_name",
         "district",
         "region",
-        "state",                 # VERY common misuse
+        "state",                
         "address_city",
         "branch_city",
         "restaurant_city",
@@ -171,8 +164,6 @@ def semantic_column_mapping(df, synonym_map):
                 break
     return df.rename(columns=mapping)
 
-# STEP 3.5: DUPLICATE FIX
-
 def resolve_duplicate_columns(df):
     df = df.copy()
     dupes = df.columns[df.columns.duplicated()].unique()
@@ -183,8 +174,6 @@ def resolve_duplicate_columns(df):
         df = df.drop(columns=cols[1:])
 
     return df
-
-# STEP 4: SCHEMA ENFORCEMENT
 
 REQUIRED_COLUMNS = [
     "created_at",
@@ -214,8 +203,6 @@ def enforce_schema(df):
             df[col] = DEFAULT_VALUES[col]
     return df[REQUIRED_COLUMNS]
 
-# STEP 4.5: ROW CLEANING
-
 def clean_rows_based_on_rating(df):
     df["rating_overall"] = pd.to_numeric(df["rating_overall"], errors="coerce")
     df = df[df["rating_overall"].notna()]
@@ -236,7 +223,6 @@ def clean_rows_based_on_rating(df):
     df["review_text"] = df.apply(auto_review, axis=1)
     return df
 
-# STEP 5: TIME FEATURES
 
 def add_and_fix_time_features(df):
     df["created_at"] = pd.to_datetime(df["created_at"], errors="coerce", utc=True)
@@ -259,30 +245,21 @@ def add_and_fix_time_features(df):
 
     return df
 
-# STEP 6: AGGREGATION
 
 def add_restaurant_aggregates(df):
     agg = (
-        df.groupby("restaurant_name")
-        .agg(
+        df.groupby("restaurant_name").agg(
             restaurant_review_count=("rating_overall", "count"),
             restaurant_overall_rating=("rating_overall", "mean")
-        )
-        .reset_index()
-    )
+        ).reset_index())
 
     agg["restaurant_overall_rating"] = agg["restaurant_overall_rating"].round(2)
     return df.merge(agg, on="restaurant_name", how="left")
-
-
-# STEP 7: EXPORT FIX
 
 def prepare_for_export(df):
     df = df.copy()
     df["created_at"] = df["created_at"].dt.tz_convert(None)
     return df
-
-# CORE PIPELINE FUNCTION
 
 def standardize_restaurant_reviews(input_file_path, output_file_path=None):
     raw_df = read_input_file(input_file_path)
@@ -306,9 +283,6 @@ def standardize_restaurant_reviews(input_file_path, output_file_path=None):
 
     return df
 
-# CLI ENTRY POINT
-
-
 # DEFAULT_INPUT = "restaurant_reviews_50k.csv"
 # DEFAULT_OUTPUT = "standardized_test.csv"
 
@@ -320,6 +294,6 @@ def standardize_restaurant_reviews(input_file_path, output_file_path=None):
 #     output_file_path=output_file
 # )
 
-# print("✅ Pipeline completed successfully")
-# print(f"📤 Output file: {output_file}")
-# print("📐 Total reviews:", len(df))
+# print("Pipeline completed successfully")
+# print(f"Output file: {output_file}")
+# print("Total reviews:", len(df))
