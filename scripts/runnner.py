@@ -22,7 +22,7 @@ def run_all(INPUT_CSV):
     # Theme extraction
 
     print("Starting theme extraction...")
-    theme_insights_results=run_theme_extraction(OUTPUT_STANDARD_CSV, THEME_KEYWORDS_JSON,"themes_test.csv")
+    theme_insights_results=run_theme_extraction(OUTPUT_STANDARD_CSV, THEME_KEYWORDS_JSON)
 
     # Multilayer verbatim analysis
     qualitative_multilayer_verbatim=run_full_multitier_analysis()

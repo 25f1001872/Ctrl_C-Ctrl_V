@@ -368,7 +368,11 @@
       });
 
       const data = await res.json();
+      console.log("Analysis result received:", data);
+      alert("Analysis complete! Redirecting to insights dashboard.");
       localStorage.setItem("analysis_result", JSON.stringify(data));
+      
+      await new Promise(r => setTimeout(r, 50));
       window.location.href = "/quant";
 
     } catch (err) {

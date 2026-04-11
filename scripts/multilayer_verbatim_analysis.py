@@ -4,11 +4,12 @@ from collections import defaultdict, Counter
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
+PARENT_DIR = BASE_DIR.parent
 # =========================================================
 # CONFIG
 # =========================================================
 REVIEWS_CSV = BASE_DIR / "standardized_output.csv"
-THEMES_CSV = BASE_DIR / "themes_test.csv"
+THEMES_CSV = PARENT_DIR / "themes_test.csv"
 RULE_KEYWORDS_JSON = BASE_DIR / "rule_keywords.json"
 FOOD_ONTOLOGY_JSON = BASE_DIR / "food_domain_ontology.json"
 REVIEW_TEXT_COLUMN = "review_text"

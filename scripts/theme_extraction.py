@@ -126,7 +126,6 @@ def analyze_recurring_theme_concerns_json(
 def run_theme_extraction(
     input_csv: str,
     flattened_keywords_json: str,
-    output_csv: str,
     review_text_column: str = "review_text",
     rating_column: str = "rating_overall"
 ):
@@ -149,7 +148,7 @@ def run_theme_extraction(
         all_rows.extend(flat_rows)
 
     themes_df = pd.DataFrame(all_rows)
-    themes_df.to_csv(output_csv, index=False)
+    themes_df.to_csv("themes_test.csv", index=False)
 
     # 🔍 JSON insight generation
     concerns_json = analyze_recurring_theme_concerns_json(themes_df)
